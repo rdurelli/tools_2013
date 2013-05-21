@@ -1,0 +1,64 @@
+%
+%
+%
+%Neste trabalho foram apresentados dois novos diagramas para apoir o processo
+%de reuso de FTs. Esses novos diagramas determinam também um novo processo
+%de reuso. 
+
+ In this paper, a model-based process was presented, which  raises abstraction levels of CF reuse. It serves as a graphical view that replaces textual cookbooks and is used to perform the reuse in a model driven approach.
+From our proposed model-based approach, a new reuse process was delineated, 
+which employs the forms during the development of a new application, allowing engineers to start the reuse since earlier software development phases and reduce the time to reuse a CF.
+ With this, application developers do not need to worry about reuse coding issues nor how the framework was implemented, allowing to focus on the reuse requirements in a higher abstraction level.
+
+ Our approach was evaluated in two experiments that 
+ could answer the questions of the study planning, which indicate their conclusive success. 
+ The links for the gathered data can be accessed on \textit{http://www2.dc.ufscar.br/\textasciitilde{}valter/}.
+ The results regarding the productivity of reuse process were promising.
+ However, the results of the maintenance study showed that our technique has no disadvantages in maintenance effort.
+
+
+%
+%
+%contribuição:
+%
+%
+%- falar que elevou o nível de abstração e que agora pode ser feito em etapas anteriores.
+%- Até o presente momento foi desenvolvido um protótipo da ferramenta que é capaz de 
+%gerar o código de instanciacão de frameworks.
+%- permite que o eng. de aplicação se concentre nos requisitos de reuso e não
+%em detalhes de implementação
+%- cookbook de forma gráfica.
+%
+%
+%
+%limitações
+%
+%- ???
+%
+%
+%
+%Trabalhos futuros: 
+%
+%- melhorar a aparência dos diagramas desenvolvidos
+%- conduzir experimentos para averiguar se a estratégia de reuso proposta apresenta
+%vantaghens quando comparada com a tradicional.
+%- desenvolver módulos que verifiquem a consistência das variabilidades escolhidas.
+%Tem algumas que são mutuamente exclusivas, por exemplo.
+%- como ele faz a seleção das variabilidades ?
+
+%We have conducted experiments that indicate that our tool has advantages on reducing the time to reuse a CF. %Furthermore, the experiments had shown that the proposed models facilitate the instantiation of a CFF members.   
+%With our tool, it is possible to develop information systems that reuse crosscutting frameworks in less time than by reusing the frameworks conventionally, which gives advantages to companies that rely on these systems.
+%
+Furthermore, we have identified some limitations related to our research project. Once the models have been devised on top of the Eclipse Modeling Project, they can not be used in another environment. Furthermore, the code generator only generates code for Java and AspectJ, therefore, only frameworks developed in these languages are currently supported.
+
+It is also important to point that our tool is part of %"ProLine-RM",
+ a project to develop an integrated development environment for CF, which currently supports CF feature subset selection and a CF repository service. It is important to note that our tool also supports CFs that do not employ feature selection, in these cases, the RRM and RMs would be exactly equal.
+
+However, we have not yet evaluated how to deal with coupling multiple CFs to a single base application. Despite this functionality already being  supported, some frameworks may conflict with each other and lead to unwanted results.
+
+The code generated is based on AspectJ and it was not evaluated if it supports every CF  without modifications.
+%It is also intended to investigate how to select the subset of requirements and variabilities.
+%This tool is part of a major project that includes features selection, which is not 
+Although not stated, we have also worked on selecting subsets of features of the framework.
+
+Long term future works regard: (\textit{i}) carry out a experiment using other CF, for verifying if the models proposed assist both the reuse and to maintain a reuse code; (\textit{ii}) execute a experiment to verify whether the abstraction of the elements related to the models are sufficiently ideal; (\textit{iii}) evaluate the standpoint of the domain engineers/frameworks, (\textit{iv}) improve the elements of the models, i.e., better them graphically and (\textit{v}) analyze the reusability of the abstract metamodel's metaclasses. 

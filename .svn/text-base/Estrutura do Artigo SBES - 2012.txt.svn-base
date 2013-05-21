@@ -1,0 +1,81 @@
+
+
+Artigo SBES
+
+
+Título: A Model-BAsed Approach for Reusing Crosscutting Framewrok Families
+
+
+1 - Introdução
+
+
+- um parágrafo sobre poa
+- parar de dizer "diagrama de reuso" e começar a falar "modelo". O que temos é um modelo que é graficamente
+representado como um ´formulario´
+- ressaltar que a escolha de um subconjunto de features faz com que o framework contenha um subdomínio
+mais restrito, diminuindo a quantidade de features desnecessárias nas aplicacoes desenvolvidas.
+- falar dos dois experimentos que são apresentados
+- pontuar claramente os benefícios e contribuioes deste artigo
+
+
+
+2 - Crosscutting Framework Families
+
+- dizer que é uma "família" de CFs e não apenas um.  Continua citando o meu
+artigo do sbes 2005 por causa da terminologia. 
+
+- em algum lugar aqui citar o meu artigo do ACP4IS de 2008 (aosd).
+
+- Deixar claro o processo de reuso é composto por duas etapas: instanciação e composição. 
+
+
+
+3 - A abordagem
+
+
+parágrafo introdutório.
+mostra o diagrama de atividades
+
+
+3.1 - (parte do Rafael) 
+
+- seleção de features
+- mostrar também a parte inicial, em que o "eng. de domínio" pode fazer upload de uma familia 
+de FTs e que o eng. de aplicação pode "visualizar" e "escolher" um subconjunto da família.
+- mostrar que ao selecionar o subconjunto ele trará o subconjunto de códgo e também parte
+do modelo de reuso.
+- mostrar figura do plug-in.
+- colocar só uma figura da árvore de features, já com os elementos ´checados´. Essa figura será usada
+também me outras seções.
+
+
+3.2 - (parte do Thiago) - depois que já selecionou o subconjunto
+
+
+
+4 - Exemplo de uso da abordagem
+
+
+4.1 - exemplo da parte do Rafael
+
+
+4.2 - exemplo da parte do Thiago
+
+
+
+
+5 - avaliação
+
+
+- Argumentar no seguinte sentido: Foi apresentada uma abordagem completa para reuso de familias de CFs com apoio de modelos.
+A parte principal da abordagem é o modelo que permite que o eng. de app possa fazer o reuso. Assim, nesta seção são mostrados
+dois experimentos. O primeiro compara a abordagem proposta com a foram convencional de fazer o "processo de reuso" ad-hoc. Isso
+permite avaliar o lado do eng. de app. 
+
+Em geral, abordagem baseadas em reuso argumentam que a produtividade é melhorada em funcao de ..... Entretanto, a fase de manutençao
+é a que consome a maior parte dos recursos... [] [] []. Por causa disso também mostramos os resultados de um experimento que 
+avalia o esforço de se fazer uma manutenção em aplicacoes criadas com o processo convencional e com o processo baseado em modelo.
+
+
+
+Plano de ação:

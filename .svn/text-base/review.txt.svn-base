@@ -1,0 +1,76 @@
+review	 	2012-04-23 15:42:28	2012-04-23 15:42:28	2012-04-24 19:32:40	2012-05-13 19:44:52	2012-05-16	2012-05-14 10:33:24
+
+1: Summary: A brief description of the paper.
+    This paper presents a model-based approach to deal with crosscutting frameworks. An experiment to validate the results is presented in the paper
+
+2: Paper strength: What are the positive aspects of this paper, specially with respect to Originality and novelty; Technical soundness and contribution; Readability, organization and presentation; Comparison to previous work; Evaluation.
+    The research underlying this paper is sound and the whole presentation is readable and solid. The experiment is reasonable
+
+3: Paper weakness: What are the negative aspects of this paper, specially with respect to Originality and novelty; Technical soundness and contribution; Readability, organization and presentation; Comparison to previous work; Evaluation.
+    The most important weakness I found is that the technical explanation of the approach (Section III) is too short and should be improved. In this version, the paper is more devoted to the assessment than to the approach itself.
+
+4: Comments to authors: Comments and suggestions for improving the paper.
+    I really liked the paper though I felt a bit dissapointed since the technical explanation is a bit short. Could you improve it? Perhaps you could shorten a bit the assessment to have more space for this.
+
+review	 	2012-04-23 15:10:18	2012-04-23 15:10:18	2012-04-24 17:53:13	2012-05-13 19:44:53	2012-05-16	2012-05-16 22:10:32
+
+1: Summary: A brief description of the paper.
+    The paper presents a model-driven approach to the reuse of crosscutting frameworks (CFs) that simplifies the work of application engineers.
+
+2: Paper strength: What are the positive aspects of this paper, specially with respect to Originality and novelty; Technical soundness and contribution; Readability, organization and presentation; Comparison to previous work; Evaluation.
+    The paper presents an interesting approach to improving reuse by integrating aspect-oriented and model-driven software development. The paper is technically sound, presenting a prototype implementation of the approach, as well as results from well-designed experiments which were statistically validated.
+
+3: Paper weakness: What are the negative aspects of this paper, specially with respect to Originality and novelty; Technical soundness and contribution; Readability, organization and presentation; Comparison to previous work; Evaluation.
+    The organization, presentation, and comparison to previous work is poor, making it unclear the actual level of contribution and originality of the paper.
+
+4: Comments to authors: Comments and suggestions for improving the paper.
+    The text focus is a bit too biased towards the experimental results. The paper lacks more detail about the proposed metamodel, transformation rules, and the corresponding tooling that allow for the definition of CFs. The key idea of the approach---the CFs as design/implementation reuse artifacts---is only analysed from a development-with-reuse standpoint. The paper misses an interesting aspect of using model-driven engineering, i.e. how the proposed approach helps with the employment of domain-specific expertise (development-for-reuse) to raise the abstraction level of the models used for generating code. It seems that such aspect is somehow explored in the modeling of feature selection and validation of features combination. Nevertheless, it is exactly that part whose details are mostly omitted in the paper. Such omission makes the presentation of the approach incomplete and difficult to have its rationale communicated from a more comprehensive model-driven engineering viewpoint.
+
+review	 	2012-04-23 15:10:18	2012-04-23 15:10:18	2012-04-26 13:36:03	2012-05-13 19:44:53	2012-05-16	2012-05-18 14:07:49
+
+1: Summary: A brief description of the paper.
+    The article describes a strategy for using crosscutting frameworks in a grey-like way. The idea is to represent the framework as a model in order to facilitate its reuse. A crosscutting framework can affect many classes in an application and it can be difficult to re-use the framework in a white-box fashion since many details should be well understood.
+
+2: Paper strength: What are the positive aspects of this paper, specially with respect to Originality and novelty; Technical soundness and contribution; Readability, organization and presentation; Comparison to previous work; Evaluation.
+    The paper is well written (although some small mistakes can be found).
+
+    The experiments were carefully designed and conducted.
+
+    The limitations of the work are well discussed in the conclusions as well as the lessons learned.
+
+3: Paper weakness: What are the negative aspects of this paper, specially with respect to Originality and novelty; Technical soundness and contribution; Readability, organization and presentation; Comparison to previous work; Evaluation.
+    As the authors state in the conclusions, in general, an application involves more than one quality attribute and the work should be extended to treat such scenario.
+
+    The originality of the solution is not high.
+
+4: Comments to authors: Comments and suggestions for improving the paper.
+    In Section II, use "should" instead of "must".
+    In Section III, use "shown" instead of "visible".
+    In Section V, use "Related work", singular.
+    In Section VI, use "Conclusions", plural.
+    Use "Acknowledgments", plural.
+
+review	 	2012-04-26 12:26:25	2012-04-26 12:26:25	2012-04-26 21:46:46	 	2012-05-16	2012-05-13 23:38:50
+
+1: Summary: A brief description of the paper.
+    The paper presents a model-based approach aiming to support the reuse of crosscutting concerns (crosscutting frameworks). The proposed approach is supported by a tool which assists the composition of crosscutting concerns with the base application. The evaluation is based on two comparative studies, one focusing on reuse and another on maintenance, involving eight undergraduate students and eight graduate students. The results indicate that participants using the model-based approach performed their reuse tasks faster than participants using conventional code-based reuse. However, no difference could be observed with respect to the maintenance tasks.
+
+2: Paper strength: What are the positive aspects of this paper, specially with respect to Originality and novelty; Technical soundness and contribution; Readability, organization and presentation; Comparison to previous work; Evaluation.
+    + The paper is generally easy to follow, although there are some typos and grammar issues.
+    + The motivation is clear and the paper targets an interesting research topic: reuse and composition of crosscutting concerns across applications.
+    + The evaluation procedures sound, but the data set is too small to allow generalizing the results.
+    + This research builds up on top of results of previous work.
+
+3: Paper weakness: What are the negative aspects of this paper, specially with respect to Originality and novelty; Technical soundness and contribution; Readability, organization and presentation; Comparison to previous work; Evaluation.
+    - As far as I understood, the paper evaluation is limited to only one crosscutting concern (Persistence) and only one measure (time) was used. Therefore, first, the results might not be similar if other crosscutting concerns are used. Furthermore, I do not think time alone is a proper way to measure either reuse or maintainability.
+    - The introduction lacks key definitions and citations to appropriate work. For instance, 2nd paragraph talks about AOP, crosscutting concerns and AspectJ, but (i) proper references are not given to AOP and AspectJ and (ii) crosscutting concern is not defined. A similar problem occurs with terms of model-based development.
+    - It is very confusing the way authors refer to Figure 2. That is, 1st paragraph of Page 3 states that "In Figure 2 there is an overview of our tool"; 4th paragraph says that "the RM is visible in Figure 2"; yet 2nd paragraph in Section III.A claims that "In Figure 2, there is our model editor". So, does Figure 2 show a tool, a model, or an editor? I suggest authors either (i) split this figure or (ii) explain the whole figure in a single place.
+    - The evaluation (Section IV) tangles the reuse and maintenance studies. I think the discussion would be better modularized and the results easier to understand if the reuse and maintenance studies were presented and discussed in separate sections.
+    - Section III says that "details on feature selection are not shown on this paper" and Section III.A says that "Further details of this environment are out of the scope of this paper". I understand that the paper has space constraints. However, I think such details is relevant to someone fully understand the paper. Can you provide extra material in a website or refer to additional published work that has such details?
+
+4: Comments to authors: Comments and suggestions for improving the paper.
+    Minor issues:
+    - A lot of space (more than one page column) is used to state and explain the paper hypotheses in 5. I think you can summarize Item 2 in Section IV.B in just a couple of sentences.
+    - Figure 2 is far away from the first citation on the text.
+    - I could not find "base.Customer.initial()" in Figure 2 as stated in Section III.A.
+    - Data in Tables IV and V are almost unreadable. I recommend either (i) presenting these data in a better way or (ii) moving non-discussed data to a website.

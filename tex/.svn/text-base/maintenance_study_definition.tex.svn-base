@@ -1,0 +1,4 @@
+The objective was to compare the effort in modifying a CF-based application by editing the reuse code (conventional technique) with by editing the RM. The Persistence CF shown in Section~\ref{CFF} was again used in the  two maintenance exercises. The quantitative focus was measured by means of the time spent in the maintenance tasks and the qualitative focus was to determine which artifact takes less effort to edit during maintenance. This experiment was conducted from the perspective of application engineers who intend to maintain CF-based applications. The study object is the `effort' to maintain a CF-based application.
+
+
+

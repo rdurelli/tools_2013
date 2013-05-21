@@ -1,0 +1,48 @@
+%suporte cite no natbib
+\newcommand{\citep}{\cite}
+
+%constantes para tabelas
+\newcommand{\minsize}{0.15\textwidth}
+%cor da sombra da tabela
+\newcommand{\lightgray}{0.95}
+%cor da sombra da tabela
+\newcommand{\shadow}{0.8}
+
+%nao faz nada, mas mantem espacos e quebras de linha
+\newcommand{\nothing}[1]
+{
+#1
+}
+%alias para tamanho padrao
+\newcommand{\tablesize}[1]
+{
+\small{#1}
+}
+
+%tamanho padrao de figura de uma coluna
+\newcommand{\figwidth}{0.48\textwidth}
+
+%formato padrao de figura
+\newcommand{\figext}{eps}
+%\newcommand{\figext}{pdf}
+
+
+%encolhe a distancia entre linhas da tabela
+ \renewcommand{\arraystretch}{0.55}
+
+\newcommand{\papertitle}{Model-Based Reuse for Crosscutting Frameworks: Assessing Reuse and Maintainability Effort}
+
+%\pdfinfo{
+%   /Author (Thiago Gottardi and Rafael Serapilha Durelli)
+%   /Title  (A Model-Based Approach for Crosscutting Framework Family Reuse)
+%   /CreationDate (default)
+%   /ModDate (default)
+%   /Subject (SBES2012)
+%   /Keywords (Model-Driven Engineering; Framework Reuse; Aspect-Oriented Programming; Crosscutting Framework; Empirical Study.)
+%}
+
+\newcommand{\sreal}{Primary 
+}
+
+\newcommand{\sspare}{Secondary 
+}

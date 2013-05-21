@@ -1,0 +1,76 @@
+
+
+\begin{abstract}
+\input{tex/abstract}
+\end{abstract}
+% IEEEtran.cls defaults to using nonbold math in the Abstract.
+% This preserves the distinction between vectors and scalars. However,
+% if the conference you are submitting to favors bold math in the abstract,
+% then you can use LaTeX's standard command \boldmath at the very start
+% of the abstract to achieve this. Many IEEE journals/conferences frown on
+% math in the abstract anyway.
+
+% no keywords
+
+
+
+
+% For peer review papers, you can put extra information on the cover
+% page as needed:
+% \ifCLASSOPTIONpeerreview
+% \begin{center} \bfseries EDICS Category: 3-BBND \end{center}
+% \fi
+%
+% For peerreview papers, this IEEEtran command inserts a page break and
+% creates the second title. It will be ignored for other modes.
+\IEEEpeerreviewmaketitle
+
+\section{Introduction}
+	\input{tex/introduction}
+
+	%This paper is structured as follows: in Section II, Crosscutting Frameworks are explained; in Section III, the Proposed Model and the Reuse Process are shown; in Section IV, a tool to support the process is used to reuse a persistence framework as an Example; in Section V, an empirical evaluation is presented; in Section VI, there are related works and in Section VII, there are the conclusions.
+	
+	
+\section{Crosscutting Frameworks\label{CFF}}
+	\input{tex/crosscutting_framework_families}
+\section{Model-Based Reuse Approach}
+	\input{tex/approach}
+	\subsection{Reuse Example\label{build_member}}
+		\input{tex/building_a_Member}
+	%\subsection{Domain Engineering}
+	%	\input{tex/domain_engineering}
+	%\subsection{Application Engineering}
+	%			\input{tex/application_engineering}
+				
+%\section{Approach Usage Example}
+	%\input{tex/approach_usage_example}
+	%\subsection{Domain Engineering Example}\label{sec:domain_engineering_example}
+	%	\input{tex/domain_engineering_example}
+	%\subsection{Application Engineering Example}
+	%	\input{tex/application_engineering_example}
+		
+\section{Evaluation}
+	\input{tex/evaluation}
+	\subsection{Reuse Study Definition}
+		\input{tex/reuse_study_definition}
+	\subsection{Maintenance Study Definition}
+		\input{tex/maintenance_study_definition}
+	\subsection{Study Planning}
+		\input{tex/study_planning}
+	\subsection{Operation}
+		\input{tex/operation}
+	\subsection{Data Analysis and Interpretation}
+		\input{tex/data_analysis_and_interpretation}
+	\subsection{Hypotheses Testing}
+		\input{tex/hypotheses_testing}
+	\subsection{Threats to Validity}
+		\input{tex/threats_to_validity}
+\section{Related Work}
+		\input{tex/related_works}
+\section{Conclusions}
+		\input{tex/conclusion}
+
+\section*{Acknowledgments}
+	\input{tex/acknowledgment}
+
+

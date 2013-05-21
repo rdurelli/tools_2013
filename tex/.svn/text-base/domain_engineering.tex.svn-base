@@ -1,0 +1,31 @@
+ Figure~\ref{fig:domain_engineering} depicts a simplified set of activities that must be done at the DE phase. 
+ A more detailed set of activities is shown in another paper \cite{gottardiwasp2011}.
+ During the first activity (marked with `A'), the engineer should get enough expertise related to 
+ the domain prior to developing all necessaries artifacts. 
+ Afterwards, the CFF has to be elaborated itself (`B'), consequently all classes, 
+ interfaces and aspects will be developed by the domain engineer. 
+ At the third activity, the feature model has to be modeled (`C'), in which describes all features mandatory, 
+ optional and alternative of the CFF. 
+ The Requirements Reuse Model (RRM) is the last artifact that has to be modeled (`D').
+ This model it is important to document the CFF and to represent its reuse requirements. 
+
+\begin{figure}[!h]
+\centering
+  % Requires \usepackage{graphicx}
+ \includegraphics[width=0.32\textwidth, height=0.14\textheight]{figuras/domain_eng_diag.\figext}
+\caption{Domain Engineering Activity Diagram\label{fig:domain_engineering}}
+\end{figure} 
+ 
+ The last activity that has to be done is the uploading of the CFF (`E'),	 feature model and RRM.   
+ An example of a CFF being uploaded is shown in Figure~\ref{fig:uploadedcffs}, wherein 
+ all information related to the CFF must be filled in, besides the information, 
+ the feature model, RRM and the CFF itself must be uploaded, as well.
+ These information and artifacts are available at the AE phase in order to assist the application engineer identify a 
+ CFF that may be used to fulfill the application requirements that will be developed.
+ Further details upon this phase is presented in Section~\ref{sec:domain_engineering_example}.   
+ 
+%\begin{figure}[!h]
+%\centering
+%\includegraphics[width=\figwidth]{figuras/UploadExample.\figext}
+%\caption{Uploading a Persistence CFF in the Repository\label{fig:uploadedcffs}}
+%\end{figure}

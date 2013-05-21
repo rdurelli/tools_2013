@@ -1,0 +1,43 @@
+%Crosscutting Frameworks Families (CFF) can be defined as a set of features where each feature is part of a Crosscutting Framework (CF). 
+
+ Crosscutting Frameworks (CF) encapsulate the generic behavior of a single crosscutting concern \citep{camanais,sakenou,cunha,soudarajan}.
+ There are CFs developed for persistence \citep{soares,camanais}, security \citep{shah}, cryptography \citep{huang}, distribution \citep{soares} and other concerns \citep{Mortensen_creatingpluggable}.
+ Their main objective is to make the reuse of such concerns easier during the development of an application.
+
+%Crosscutting Frameworks have higher levels of modularization than Framelets \cite{pree}. Framelets are also used to modularize and ease crosscutting code reuse, however, reusing a Framelet requires explicit function calls from the base code, which is not needed while using a CF due to aspect oriented programming concepts.
+
+%, permitindo reuso desses interesses, como persistncia, segurana e regras de negcio .  FTs possuem mecanismos de composio abstratos e podem ou no possuir variabilidades funcionais.  Esse tipo de \textit{framework} bastante similar a um \textit{framelet} em seu propsito \citep{pree}, porm difere na tcnica empregada na implementao, no causando espalhamento e entrelaamento de cdigo.
+%Assim como qualquer \textit{framework}, um FT tambm possui ``requisitos de reuso''. Esses requisitos de reuso 
+
+
+ As well as other types of frameworks, CFs also %have ``reuse requirements''. % i.e., activities that must be done by application engineer to be able to couple the framework with a base application.
+%Reuse requirement is a high level specification of all types of information required by the framework instantiation that can be found in a base application.
+ need information regarding the base application in order to be reused correctly and work properly.
+ We named these information ``Reuse Requirements'' (RR).
+ For instance, the RR for an Access Control CF includes: 1) the application methods that need to have their access controlled;
+ 2) which are the roles played by users;
+ 3) how many times a user is allowed get an incorrect password.
+ This information is commonly documented in manuals known as ``Cookbooks''.
+
+ Unlike application frameworks, which are used to generate a whole new application, a CF needs to be coupled to a base application in order to become functional.
+ The standard process to reuse a CF is composed by two activities: instantiation and composition.
+ The instantiation is when the application engineer is choosing variabilities and implementing hooks, while the coupling is when he/she is providing composition rules to couple the chosen variabilities to a base code.
+ During the composition activity, pointcuts and composition rules are defined, unifying the chosen variabilities and the base code. 
+
+ Applications developed with CFs are composed by three types of code modules: base, reuse and framework. 
+ The ``base code'' represents code of the base application. 
+ In the ``framework code'' there is the code of the CF, which is untouched during the reuse process. 
+ The ``reuse module'' is the connection between the base application and a framework. 
+ Each final application can be composed by several CFs, each one coupled by a reuse module. 
+ The code that was created specifically to reuse an CF is referred here as ``reuse code'' and applications which were developed based on CFs is referred here as CF-based Applications.
+
+ In a previous work we have developed a Persistence CF~\cite{valterCFF}, which is used as case study in this paper. 
+ This CF has some features, for instance, both ``Persistence'' and ``Connection'' are mandatory features. 
+ The first one, aims to introduce a set of persistence operations (e.g., store, remove, update, etc) into applications persistence classes. 
+ The second feature, is related to the database connection and identifies points in the application code where the connection should be opened and closed. 
+ This feature has variabilities, as for example, the Database Management System (e.g., MySQL, SyBase, Native and Interbase). 
+ The CF also has a set of optional features such as ``Caching'', which is used to improve performance by keeping copies of the data in local memory, and ``Pooling'' which represents a number of  active database connections.   
+
+
+%A execuo de um FT  similar a dos \textit{framelets}, o fluxo de controle principal  aplicao, porm, diferentemente dos \textit{framelets}, a aplicao no necessita invocar o FT. As abstraes do paradigma permitem que o \textit{framework} atue no cdigo base, aplicando comportamento sem invadir o contedo de seu cdigo, mantendo a modularizao.
+%Entretanto, depois que o controle foi transferido para o nvel do framework, o comportamento de ambos  igual, consistindo em chamadas a mtodos concretizados no nvel da aplicao, caracterizando o princpio de Hollywood (Johnson, 1997).

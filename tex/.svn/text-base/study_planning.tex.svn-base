@@ -1,0 +1,183 @@
+The first experiment was planned considering the following question: ``Which reuse technique takes less effort to reuse a CF?'';
+The second experiment was planned considering the question: ``Which artifact takes less effort to edit during maintenance, reuse model or reuse code?'';
+We gathered and analyzed the timings taken to complete the process for each activity. 
+
+%%We applied the following metrics 
+%%
+%%
+%%The following data was captured for each reuse activity:
+%	\begin{itemize}
+%		\item Reuse Technique;
+%		\item Base Application;
+%		\item Date and Time of each execution;
+%		\item Execution Type;
+%		\item Reuse Requirements Information.
+%	\end{itemize}
+%%	
+%The ``Reuse Technique'' is used to identify if the experiment subject is using the model based reuse tool or the conventional technique;
+%``Base Application'' is used to identify which provided application is being reused;
+%``Date and Time of each execution'' is the start and finish time of each program execution.
+%``Execution Type'' is the finality of each program execution, it may be test case, code generation, validation or initial time control;
+%``Reuse Requirements Information'' the data needed by the framework during reuse that was supplied by the subject, this includes names of classes to be extended, pointcut definitions and overridden methods that supply values.
+%
+%An information system was created in order to gather the specified information. We added code to the reused applications to submit the data to a server which combined all the data into a database. All the data except for the ``initial time control'' execution were gathered transparently without requiring any effort to the subjects. 
+
+\subsubsection{Context Selection}
+
+Both studies were conducted with students of Computer Science, in this section, they are referred as participants.
+Sixteen participants took part on the experiments, eight of these were undergraduate students and the other eight were post graduate students.
+Every participant had prior AspectJ experience.
+%Considering a CF for the persistence concern \citep{cammas}, during the first study, every participant was required to reuse the CF using both techniques and, during the second study, every participant was required to fix the coupling between the CF and the base application by editing the reuse code or model.
+
+\subsubsection{Formulation of Hypotheses}
+The Table~\ref{tab:hypotheses} contains our formulated hypotheses for the reuse study, which are used to compare the productivity of our tool and the conventional ad-hoc process. Both of these processes can be used to successfully reuse a CF and couple it to an application that has no reuse code.
+
+\begin{table}[h]
+\centering
+\caption{Hypotheses for the Reuse Study\label{tab:hypotheses}}
+~~\\
+\begin{tabularx}{
+.46\textwidth}{|c|X|}
+%There is no difference between using our tool and using an ad-hoc reuse process in terms of productivity (time) to couple sucessfully a CF with an application.
+\hline \cellcolor[gray]{\shadow} H0$_r$ & \footnotesize{ There is no   difference between using our tool and using an ad-hoc reuse process in terms of productivity (time) to successfully couple  a CF with an application. Then, the techniques are equivalent. \textit{Tc$_r$~-~Tm$_r$~$\approx$~0}}
+\\
+\hline \cellcolor[gray]{\shadow} Hp$_r$ & \footnotesize{There is a positive difference between using our tool and using an ad-hoc reuse process in terms of productivity (time) to successfully couple  a CF with an application. Then, the conventional technique takes more time than the model-based tool. \textit{Tc$_r$~-~Tm$_r$~$>$~0}}
+\\
+\hline \cellcolor[gray]{\shadow} Hn$_r$ & \footnotesize{There is a negative difference between using our tool and using an ad-hoc reuse process in terms of productivity (time) to successfully couple  a CF with an application. Then, the conventional technique takes less time than the model-based tool. \textit{Tc$_r$~-~Tm$_r$~$<$~0}}
+\\
+\hline
+\end{tabularx}
+\end{table}
+
+There are two variables shown on the table: ``Tc$_r$'' and ``Tm$_r$''. ``Tc$_r$'' represents the overall time to reuse the framework using the conventional technique while ``Tm$_r$'' represents the overall time to reuse the framework using the model-based tool.
+There are three hypotheses shown on the table:  ``H0$_r$'', ``Hp$_r$'' and ``Hn$_r$''.
+The ``H0$_r$'' hypothesis is true when both techniques are equivalent; then, the time spent using the conventional technique minus the time spent using the model-based tool is approximately zero.
+The ``Hp$_r$'' hypothesis is true when the conventional technique takes longer than the model-based tool; then, the time spent to use the conventional technique minus the time of the model-based tool is positive.
+The ``Hn$_r$'' hypothesis is true when the conventional technique takes longer than the model-based tool; then, the time taken to use the conventional technique minus the time taken to use the model-based tool is negative.
+As these hypotheses consider different ranges of a single resulting real value, then, they are mutually exclusive and exactly one of them is true.
+
+The formulated hypotheses for the maintenance study are listed on Table~\ref{tab:hypotheses_maintenance}.
+These hypotheses consider the outcome of comparing the edition of the reuse code (conventional technique) with our approach (model-based).
+
+\begin{table}[h]
+\centering
+\caption{Hypotheses for the Maintenance Study\label{tab:hypotheses_maintenance}}
+~~\\
+\begin{tabularx}{
+.46\textwidth}{|c|X|}
+%There is no difference between using our tool and using an ad-hoc reuse process in terms of productivity (time) to couple sucessfully a CF with an application.
+\hline \cellcolor[gray]{\shadow} H0$_m$ & \footnotesize{There is no   difference between using editing a reuse model and editing the reuse code in terms of productivity (time) when maintaining an application that reuses a CF. Then, it is equivalent to edit any of the artifacts. \textit{Tc$_m$~-~Tm$_m$~$\approx$~0}}
+\\
+\hline \cellcolor[gray]{\shadow} Hp$_m$ & \footnotesize{There is a positive difference between using editing a reuse model and editing the reuse code in terms of productivity (time) when maintaining an application that reuses a CF. Then, editing the reuse code takes more time than editing a reuse model during maintenance. \textit{Tc$_m$~-~Tm$_m$~$>$~0}}
+\\
+\hline \cellcolor[gray]{\shadow} Hn$_m$ & \footnotesize{There is a negative difference between using editing a reuse model and editing the reuse code in terms of productivity (time) when maintaining an application that reuses a CF. Then, editing the reuse code takes less time than editing a reuse model during maintenance. \textit{Tc$_m$~-~Tm$_m$~$<$~0}}
+\\
+\hline
+\end{tabularx}
+\end{table}
+
+The Table~\ref{tab:hypotheses_maintenance} also contains three variables. ``Tc$_m$'' represents the overall time to edit a reuse code during maintenance while ``Tm$_m$'' represents the overall time to edit the reuse model during maintenance.
+The ``H0$_m$'' hypothesis is true when the edition of both artifacts is equivalent.
+The ``Hp$_m$'' hypothesis is true when the edition of the reuse code takes longer than editing the RM.
+The ``Hn$_m$'' hypothesis is true when the edition of the reuse code takes less time than editing the RM.
+These hypotheses are also mutually exclusive and exactly one of them is true.
+
+\subsubsection{Variable Selection}
+The dependent variables are those which we analyze in this work. For each study, we provide analysis of the 
+``time spent to complete the process''. %
+%, ``Number of test case executions and model validations until success was reached'' and
+%``Wrong values provided grouped by their category''.
+The independent variables are controlled and manipulated, for example, ``Base Application'', ``Technique'' and ``Execution Types''.
+
+\subsubsection{Participant selection criteria}
+The participants were selected through a non probabilistic approach by convenience, i. e., the probability of all population elements belong to the same sample is unknown.
+
+\subsubsection{Design of the studies}
+The participants were divided into two groups.
+Each group was composed by four post graduate students and four undergraduate students.
+Each group was also balanced considering a characterization form and their results from the pilot study.
+On Table~\ref{tab:stddesign}, there are the phases planned for both studies.
+
+
+\begin{table}[h]
+\centering
+\caption{Study Design\label{tab:stddesign}}
+~~\\
+\begin{tabularx}{
+0.42\textwidth}{|X|c|c|}
+\hline 
+\centering
+\cellcolor[gray]{\shadow} Phase &
+\cellcolor[gray]{\shadow} {Group 1} &
+\cellcolor[gray]{\shadow} {Group 2}  \\ 
+\hline
+\centering {\multirow{2}{*}{General Training}}
+&
+\multicolumn{2}{c|}{Reuse and Maintenance Training}
+\\
+\cline{2-3}
+&
+\multicolumn{2}{c|}{Repair Shop}
+\\
+\hline \centering  \tablesize{\cellcolor[gray]{\lightgray}  1$^{st}$ Reuse}  & \cellcolor[gray]{\lightgray} Conventional & \cellcolor[gray]{\lightgray} Models   %by the profile
+\\
+\cline{2-3} \centering  \tablesize{\cellcolor[gray]{\lightgray} Pilot~Phase} & \multicolumn{2}{c|}{\tablesize{\cellcolor[gray]{\lightgray} Hotel Application}} %by the profile
+\\
+\hline \centering  \tablesize{2$^{nd}$ Reuse}  &  Models & Conventional   %by the profile
+\\
+\cline{2-3} \centering  \tablesize{Pilot~Phase} & \multicolumn{2}{c|}{\tablesize{Library Application}} %by the profile
+\\
+\hline \centering \tablesize{\cellcolor[gray]{\lightgray}1$^{st}$ \sreal} & \cellcolor[gray]{\lightgray} Conventional & \cellcolor[gray]{\lightgray} Models   %by the profile
+\\
+\cline{2-3} \centering \tablesize{\cellcolor[gray]{\lightgray} Reuse~Phase}  & \multicolumn{2}{c|}{\tablesize{\cellcolor[gray]{\lightgray} Deliveries Application}} %by the profile
+\\
+\hline \centering \tablesize{2$^{nd}$ \sreal}  &   Models & Conventional %by the profile
+\\
+\cline{2-3} \centering \tablesize{Reuse~Phase} & \multicolumn{2}{c|}{\tablesize{Flights Application}}  %by the profile
+\\
+\hline \centering \tablesize{\cellcolor[gray]{\lightgray} 1$^{st}$ \sspare}   & \cellcolor[gray]{\lightgray} Conventional & \cellcolor[gray]{\lightgray} Models %by the profile
+\\
+\cline{2-3} \centering \tablesize{\cellcolor[gray]{\lightgray} Reuse~Phase}  & \multicolumn{2}{c|}{\tablesize{\cellcolor[gray]{\lightgray} Medical Clinic Application}}  %by the profile
+\\
+\hline \centering \tablesize{2$^{nd}$ \sspare}   & Models  & Conventional %by the profile
+\\
+\cline{2-3} \centering \tablesize{Reuse~Phase} & \multicolumn{2}{c|}{\tablesize{Restaurant Application}}  %by the profile
+\\
+\hline \centering \tablesize{\cellcolor[gray]{\lightgray}1$^{st}$ \sreal} & \cellcolor[gray]{\lightgray} Conventional & \cellcolor[gray]{\lightgray} Models   %by the profile
+\\
+\cline{2-3} \centering \tablesize{\cellcolor[gray]{\lightgray} Maintenance~Phase}  & \multicolumn{2}{c|}{\tablesize{\cellcolor[gray]{\lightgray} Deliveries Application}} %by the profile
+\\
+\hline \centering \tablesize{2$^{nd}$ \sreal}  &   Models & Conventional %by the profile
+\\
+\cline{2-3} \centering \tablesize{Maintenance~Phase} & \multicolumn{2}{c|}{\tablesize{Flights Application}}  %by the profile
+\\
+\hline \centering \tablesize{\cellcolor[gray]{\lightgray} 1$^{st}$ \sspare}   & \cellcolor[gray]{\lightgray} Conventional & \cellcolor[gray]{\lightgray} Models %by the profile
+\\
+\cline{2-3} \centering \tablesize{\cellcolor[gray]{\lightgray} Maintenance~Phase}  & \multicolumn{2}{c|}{\tablesize{\cellcolor[gray]{\lightgray} Medical Clinic Application}}  %by the profile
+\\
+\hline \centering \tablesize{2$^{nd}$ \sspare}   & Models  & Conventional %by the profile
+\\
+\cline{2-3} \centering \tablesize{Maintenance~Phase} & \multicolumn{2}{c|}{\tablesize{Restaurant Application}}  %by the profile
+\\
+\hline
+
+\end{tabularx}
+\end{table}
+
+\subsubsection{Instrumentation for the Reuse Study}
+Base applications were provided along with two documents. The first document is a manual regarding the current reuse technique, and the second document is a list of details, which describes the classes, methods and values regarding the application to be coupled which are needed when reusing the framework.
+
+The applications provided had the same reuse complexity, then, in order to reuse each application, the participants had to specify four values, twelve methods and six classes.
+Each phase row of the Table~\ref{tab:stddesign} is divided into the name of the application and the technique employed to reuse the framework. For instance, during the 1$^{st}$ \sreal Reuse Phase, the participants of the first group coupled the framework to the ``Deliveries Application'' by using the conventional technique, while the participants of the second used the model-based tool to perform the same exercise.
+
+\subsubsection{Instrumentation for the Maintenance Study}
+The base applications provided for the second study were modified versions of the same applications supplied during the first study.
+These applications were provided with incorrect reuse codes (conventional) and reuse models (model-based), which should be fixed by the participants.
+The participants received a manual regarding generic errors that could happen when the reuse code or model is incorrectly defined.
+It is important to point that the manual did not have details regarding the base applications, then, the participants had to find the errors by themselves by browsing the source code.
+
+
+The applications provided had the same reuse complexity and the reuse codes and models had the same amount of errors. Then, in order to fix each CF coupling, the participants had to fix three outdated class names, three outdated method names and three mistyped characters.
+It is also important to point that errors specific to manual edition of reuse code were not inserted in this study.
+The phases are also listed on Table~\ref{tab:stddesign}. That table contains the name of the application and the technique employed during maintenance. For instance, during the 1$^{st}$ \sreal Maintenance Phase, the participants of the first group had to fix the reuse code of the ``Deliveries Application'' , while the participants of the second had to fix the reuse model to perform the same exercise.
+

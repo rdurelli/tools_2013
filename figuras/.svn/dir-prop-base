@@ -1,0 +1,21 @@
+K 10
+svn:ignore
+V 554
+UploadExample-eps-converted-to.pdf
+application_eng_diag-eps-converted-to.pdf
+bars_graph_reuse_real-eps-converted-to.pdf
+bars_graph_reuse_spare-eps-converted-to.pdf
+boxreal-eps-converted-to.pdf
+boxspare-eps-converted-to.pdf
+domain_eng_diag-eps-converted-to.pdf
+reuse_form-eps-converted-to.pdf
+reuse_code-eps-converted-to.pdf
+linesspare-eps-converted-to.pdf
+linesreal-eps-converted-to.pdf
+table_exp_real_maint.eps
+table_exp_real_reuse.eps
+TableOfAllCFFAvailable-eps-converted-to.pdf
+configurationFile-eps-converted-to.pdf
+FeatureModel-eps-converted-to.pdf
+
+END

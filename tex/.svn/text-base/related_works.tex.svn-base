@@ -1,0 +1,30 @@
+
+ The approach proposed by Cechticky \textit{et al.}  \citep{Cechticky:2003:GAF:954186.954203} allows object-oriented application framework reuse by using a tool called OBS Instantiation Environment. That tool supports graphical models do define the settings of the expected application to be generated. The model to code transformation generates a new application  that reuses the framework.
+
+ The proposal found in this paper differs from their approach on the following topics: 1) their approach is restricted to frameworks known during the development of the tool; 2) it does not use aspect-orientation; 3) the reuse process is applied on application frameworks, %, therefore, %a completely new application is generated.
+which are used to create new applications.
+
+
+ Another approach was proposed by Oliveira \textit{et al.}  \citep{Oliveira:2011:RET:2039458.2039832}. Their approach can be applied to a greater number of object oriented frameworks. After the framework development, the framework developer may use the approach to ease the reuse by writing the cookbook in a formal language known as Reuse Definition Language (RDL) which also can be used to generate the source code.
+This process allows to select the variabilities and resources during reuse, as long as the framework engineer specifies the RDL code correctly.
+
+%The main differential of the approach proposed in this paper is the reuse code modularization.
+%The lack of reuse code modularization, as found on the other works cited in this section  \citep{Oliveira:2011:RET:2039458.2039832,Oliveira:2007:RLF:1290192.1290220,  Cechticky:2003:GAF:954186.954203} 
+%may lead to several problems, for example: 
+%1) it is not possible to apply two or more frameworks to the same base application while using the model driven process, since each execution creates a new application;
+%2) the development team depends on the complete reuse process execution to edit the code of the base application;
+%3) if it is needed to repeat reuse process execute, the whole application code would be affected, possibly leading to loss of code;
+%4) it is not possible to establish an incremental development for each feature found in each framework.
+
+ These approaches were created to support the reuse during the final development stages.
+ Therefore, the approach proposed in this paper differs from others by the supporting earlier development phases.
+ This allows the application engineer to initiate the reuse process since the analysis phase while developing an application compatible to the reused frameworks.
+ Although the approach proposed by  Cechticky \textit{et al.} \citep{Cechticky:2003:GAF:954186.954203} is specific for only one framework, its can be employed since the design phase.
+ The other related approach can be employed in a higher number of frameworks, however it is used in a lower abstraction level, and does not support the design phase.
+ Other difference is the generation of aspect-oriented   code, which improves code modularization.
+
+
+
+
+
+

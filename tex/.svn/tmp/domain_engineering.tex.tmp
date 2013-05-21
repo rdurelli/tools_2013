@@ -1,0 +1,17 @@
+Figure~\ref{fig:domain_engineering} depicts all activities that must be done at the DE phase. As can be seen in the Figure\ref{fig:domain_engineering} the first activity is the Analyze Domain (marked with `A'). In this phase the engineer should get the enough expertise related to the domain prior to developing all necessaries artifacts. Afterwards, the CFF has to be elaborated itself (`B'), consequently all classes, interfaces and aspects will be developed by the domain engineer. At the third activity, the feature model has to be modeled (`C'), in which describes all features mandatory, optional and alternative of the CFF. The RRM is the last artifact that has to be modeled (`D'). This artifact it is important to document the CFF and to represent its reuse requirements. The last activity that has to be done in this phase is the uploading of the CFF and all artifacts. Therefore, a form has to be filled in to describes all information related to the CFF. This information will be used at the AE.  
+ 
+\begin{figure}[!h]
+\centering
+  % Requires \usepackage{graphicx}
+ \includegraphics[width=0.4\textwidth, height=0.2\textheight]{figuras/domain_eng_diag.\figext}
+\caption{Domain Engineering Activity Diagram}
+\label{fig:domain_engineering}
+\end{figure}
+
+<<<<<<< .mine
+=======
+Figure~\ref{fig:domain_engineering} depicts all activities that must be done at the DE phase. The first activity (marked with `A') the engineer should get the enough expertise related to the domain prior to developing all necessaries artifacts. Afterwards, the CFF has to be elaborated itself (`B'), consequently all classes, interfaces and aspects will be developed by the domain engineer. At the third activity, the feature model has to be modeled (`C'), in which describes all features mandatory, optional and alternative of the CFF. The RRM is the last artifact that has to be modeled (`D'). This model it is important to document the CFF and to represent its reuse requirements. The last activity that has to be done in this phase is the uploading of the CFF, feature model and RRM. In this context, a form has to be filled in to describes all information related to the CFF. This information will be available at the AE to assist the application engineer identify a CFF that can be use to fulfill the application requirements that will be developed. 
+
+ 
+
+>>>>>>> .r30

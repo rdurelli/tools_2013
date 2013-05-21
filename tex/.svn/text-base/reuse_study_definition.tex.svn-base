@@ -1,0 +1,8 @@
+The objective is to compare the effort of reusing frameworks by using a conventional technique with by using a model-based technique. 
+ The Persistence CF briefly presented in Section~\ref{CFF} played the role of ``study subject'' and it was used in both reuse techniques (conventional and model-based). 
+ The quantitative focus was determined considering the time spent in conducting the reuse process and the qualitative focus was to determine which technique takes less effort during reuse process. 
+ This experiment was conducted from the perspective of application engineers reusing CFs and the study object is the `effort' to perform a CF reuse.
+
+
+
+

@@ -1,0 +1,60 @@
+Model-Driven Development (MDD) consists of the combination of generative programming, domain-specific languages and model transformations. 
+ MDD aims to reduce the semantic gap between the program domain and the  implementation, using high-level models that shield software developers from complexities of the underlying implementation platform~\citep{FranceMDD}.
+
+ On the other hand, Aspect-Oriented Programming (AOP) is a programming paradigm that overcomes the limitations of Object-Orientation by providing abstractions able to modularize crosscutting concerns (CC) such as persistence, security and distribution. 
+ Among these abstractions, Pointcuts are expressions used to capture join-points of an application, e.g., method calls and executions and variable accesses. By capturing these join-points, it is possible to write code to be executed upon a Pointcut occurrence in a modular fashion. AspectJ is one of the AOP languages that implement these abstractions \cite{aspectj}. It is also the language employed in our work.
+
+Since the advent of AOP, several researchers have investigated how its abstractions and concepts impact reuse methodologies, like product lines~\cite{Clements} and frameworks~\cite{Fayad:1997:OAF:262793.262798}. 
+%There are approaches on employing aspects to improve CC modularization in order to facilitate their reuse\citep{Mortensen_creatingpluggable,
+%shah,soares,Kulesza06improvingextensibility,
+%camanais,huang,zanon,lazanha,bynens,sakenou,cunha,soudarajan
+%}.
+%
+ Many of these researchers investigated how to design a CC in a generic way to enhance their reusability~\citep{Mortensen_creatingpluggable,
+shah,soares,Kulesza06improvingextensibility,
+camanais,huang,zanon,bynens,sakenou,cunha,soudarajan
+}. Several terms are used to represent this kind of design, e.g., reusable aspects~\cite{Mortensen_creatingpluggable}, aspect-oriented frameworks and aspect libraries~\cite{bynens}. 
+ Because the absence of a taxonomy for this kind of design, we have defined and employed the term ``Crosscutting Framework" (CF) to represent a specific kind of abstract aspect-oriented framework implementation of a single CC \cite{camanais}.
+
+Most of the CFs found in literature apply white-box reuse strategies in their instantiation process, relying on writing source code to reuse the framework\citep{Mortensen_creatingpluggable,
+shah,soares,Kulesza06improvingextensibility,
+camanais,huang,zanon,bynens,sakenou,cunha,soudarajan
+}.
+White-box strategy makes application engineers to worry about low level implementation details during the reuse process, leading to the following problems: (\textit{i}) to get know coding details regarding the programming paradigm employed in the framework, making the learning curve steeper; (\textit{ii}) coding mistakes are more likely to happen when the reuse code is created manually; (\textit{iii}) several lines of code must be written for the definitions of small number of hooks, impacting development productivity and (\textit{iv}) reuse process can only be started during implementation phase, as there is no source code in earlier phases.
+
+ To overcome these problems, in this paper, we present an approach for supporting the reuse of CFs. 
+ The approach is based on two models: %, in which the application engineer can conduct the reuse process without knowing implementation details. 
+  Reuse Requirements Model (RRM) and Reuse Model (RM). The RRM documents all the features and variabilities of a CF and is a partial replacement for cookbooks. Based on the RRM, the application engineer can then select just the desired features, building a more specific model, referred as RM. The application engineer has the opportunity to conduct the reuse process in our model-driven approach by filling the fields of this model, which is also used for code generation.
+ 
+ We also present the results of two experiments. In both experiments we have used the same Persistence CF\cite{camanais}.
+ Our approach showed benefits for the instantiation time, however, no differences were identified regarding the maintenance effort. 
+ Therefore, the main contributions of this paper are: (\textit{i}) presenting a model-based approach for CFs, (\textit{ii}) presenting the results of two experiments and (\textit{iii}) the problems of the presented approach can be generalized to other model-based framework reuse processes.  
+
+In Section II the notion related to CF, their details and a CF's description that is used in this paper are showed; both the proposed approach and an example of instantiation related to a member of persistence CF are presented in Section III; in Section IV, an empirical evaluation is presented; in Section V, there are related works and in Section VI, there are the conclusions.
+%Large information systems involve service-oriented plataforms, aspect-oriented languages, model-based engineering, ubiquitous computing, self-adaptation systems, agent-oriented solutions, etc. Independently of the scenario the main goal has been improve the team productivity and leverage good-quality products in a short time. One technique that is being used for many years is reusing software, for example, by employing frameworks.
+%Frameworks were firstly defined by Fayad \textit{et al.} \citep{Fayad:1997:OAF:262793.262798} as ``sets of reusable and customizable software components for specific application domains''. There are many types of frameworks, but in this paper, we concentrate on a specific kind of framework called "Crosscutting Framework" (CF), which are aspect-oriented frameworks.
+%Aspect-Oriented Programming (AOP) was created to improve the modularization of a system by providing language abstractions for crosscutting concerns, which could not be well modularized using previous paradigms \citep{Kiczales97aspect-orientedprogramming}.
+%As soon as the first Aspect-Oriented languages became available, researchers proposed new techniques to improve reuse of crosscutting concerns, among those proposals are ``Crosscutting Frameworks'' (CF). Crosscutting Frameworks are intended to modularize and ease reuse of a single crosscutting concern that may affect a software system, for example, persistence, concurrency, authentication and business rules. Also, these frameworks can be customized to better fit into the software requirements \citep{camanais}.
+%The conventional CF reuse process is heavily based on editing aspect-oriented source code 
+%The source code is in the same aspect-oriented programming language in which the framework was developed 
+%
+%A forma tradicional de reuso de um FT consiste em realizar sua instancia��o e composi��o por meio da edi��o de c�digo na %linguagem de programa��o em que o \textit{framework} foi desenvolvido 
+%\citep{Mortensen_creatingpluggable,
+%shah,soares,Kulesza06improvingextensibility,
+%camanais,huang,zanon%,
+%lazanha
+%}.
+%This abstraction level forces application engineers to worry about low level details of implementation, which leads to the 
+%following problems: the application engineer must know coding details regarding the programming paradigm employed to develop the framework, which makes the CF reuse process learning curve steeper;
+%coding mistakes are more likely to happen when the reuse code is created manually;
+%several lines of code must be written for the definition of small number of information needed during the reuse process, impacting development productivity; reuse process can only be started during implementation phase and the framework reuse documentation, e.g., ``cookbook'', may be complex to understand.
+%We have proposed two new models for supporting the reuse of CF. These models are graphically represented as "forms". We chose this shape because it was the most suitable for instantiation of white-box frameworks, as the application engineer needs just to inform details the base code (normally Strings) or to choose variabilities.
+%The first proposed diagram should be created by a framework engineer after developing a framework. The second diagram should be modeled by an application engineer. The framework engineer is responsible for developing a framework, while a application engineer is responsible for developing a final application that reuses a framework. 
+%In this paper, a new Model Driven Development (MDD) approach is presented. Its main objective is to shorten development time of applications that reuse a specific type of framework.
+%MDD combines generative programming, domain specific languages and software model transformation.
+%Its objective is to shorten the gap between the problem and solution, by applying models that protect developers from implementation platform complexity \citep{France:2007:MDC:1253532.1254709}. These languages are used to express domain concepts in a more effective way, while transformations are performed to convert models to codes or other models \citep{Schmidt06_ModelDrivenEngineering,1296153}. %The first diagram encompasses the ``Reuse Requirements'' and the second is employed to generate the reuse code.
+%Therefore, we employ MDD on the purpose of raising the abstraction levels of reuse process.
+%The model must be created by the framework developer after developing a framework. The idea is to release the model along with the framework code to support its reuse by replacing textual cookbooks. This model should then be used by an application engineer 
+%interested on reusing the framework and coupling it to an application being developed.
+%The use of the model is inserted in a new process for CF reuse, which allows an application engineer to reuse these frameworks in our model driven approach.
+

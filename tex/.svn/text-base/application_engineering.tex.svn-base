@@ -1,0 +1,138 @@
+ As stated in the previous sections, 
+ this phase is wherein the reuse is started effectively.
+ In order to use our approach eight activities have to be done,
+ as depicted in Figure~\ref{tab:figdiag}, which is divided into
+ base development and reuse development.
+
+%The reuse process is started searching for specifics CFF in the repository provided by the ProLine-RM. After choosing the CFF the correspond feature diagram must be downloaded. 
+
+%To assist the search, ProLine-RM has a table which contain information of each CFF that have been uploaded, Figure~\ref{fig:uploadedcffs} depicts this table.
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=0.32\textwidth, height=0.3\textheight]{figuras/application_eng_diag.\figext}
+\caption{Application Engineering Activity Diagram. \label{tab:figdiag}}
+\end{figure}
+
+ The first activity is to analyse the application being developed
+ (`a'), which is used to identifys the concerns that affect the 
+  base application.
+ Then, the engineer has the opportunity to select CFFs that modularize
+ one or more of these concerns in order to simplify application
+ development (`b'). 
+ After instantiating CFs from a CFF repository, the application
+ engineer now has a package containing a new CF instance and a empty
+ reuse model (`c').
+
+ The engineer should then design the base aplication (`d').
+ As soon as the base aplication is designed, is is possible to create
+ the base code (`e').
+ At the same moment, it is also possible to fill the fields of the
+ reuse model (`f'). 
+ After this model is complete, a model transformation may be used to
+ generate the reuse code (`g') from the reuse model.
+
+ After completing both codes, it is possible to build the final
+ application (`h'), which is the final activity of this process.
+
+% Proline-RM provides a CFF repository which may be used by the
+ %application engineer.
+ %In Figure~\ref{fig:AllCFFAvailable} there are five different CFFs:
+ %persistence, security, distribution, concurrency, and logging,
+ %respectively. 
+ %Proline-RM also shows descriptions for each of the selected CFFs.
+
+%\begin{figure}[!h]
+%\centering
+%  % Requires \usepackage{graphicx}
+% \includegraphics[width=0.48\textwidth, height=0.16\textheight]{figuras/TableOfAllCFFAvailable.\figext}
+%\caption{Availables Crosscutting Framework Families in the Repository}
+%\label{fig:AllCFFAvailable}
+%\end{figure}
+
+
+\begin{figure*}[t]
+\centering
+<<<<<<< .mine
+  % Requires \usepackage{graphicx}
+ \includegraphics[width=1\textwidth, height=0.34\textheight]{figuras/ProLineRMAndReuseCode.\figext}
+\caption{Availables Crosscutting Framework Families in the Repository}
+\label{fig:AllCFFAvailable}
+=======
+\setlength{\tabcolsep}{-1pt}
+\begin{tabular}{c c}
+Real & Spare \\
+\includegraphics[width=0.24\textwidth,height=.12\textheight]{figuras/feature_model.\figext} &
+\includegraphics[width=0.24\textwidth,height=.12\textheight]{figuras/ConfigurationFile.\figext} \\
+\end{tabular}
+\caption{Availables Crosscutting Framework Families in the Repository\label{fig:AllCFFAvailable}}
+\setlength{\tabcolsep}{6pt}
+>>>>>>> .r86
+\end{figure*}
+
+% Nevertheless, if this description is not sufficiently to help a
+ %engineer to take a decision on reusing the CFF, it is also possible
+ %to click on ``View'' to preview the feature model related to the 
+ %selected CFF.
+ %In Figure~\ref{fig:FeatureModel} there is an example of a feature
+ %model for the chosen CFF.
+
+%\begin{figure}[!h]
+%\centering
+%  % Requires \usepackage{graphicx}
+% \includegraphics[width=0.48\textwidth, height=0.15\textheight]{figuras/FeatureModel.\figext}
+%\caption{Feature Model of CFF related to persistence}
+%\label{fig:FeatureModel}
+%\end{figure}
+
+ 
+% By selecting a subset of features by using the feature model, it is
+ %possible to generate a configuration file which is used to validate
+ %whether  the
+ %feature selection, once, certain combinations of features may not
+ %lead to useful variants (e.g.,  only a single database connection may
+ %be used). An example of the configuration file shown in its graphical
+ %editor is shown in Figure~\ref{fig:configurationFile}.  
+ %Once the application engineer has chosen the features (represented by $+$), the resulting variant and constraints are generated automatically (represented by $-$). 
+ %This is useful to avoid erroneous combinations of features.
+
+%\begin{figure}[!h]
+%\centering
+%  % Requires \usepackage{graphicx}
+% \includegraphics[width=0.16\textwidth, height=0.21\textheight]{figuras/configurationFile.\figext}
+%\caption{Configuration File}
+%\label{fig:configurationFile}
+%\end{figure}
+
+% Proline-RM also supports the instantiation of a CF from a 
+ %CFF in the repository.
+ %The application engineer should submit a valid configuration file to
+ %the Proline-RM repository server which will instantiate a CF
+ %according to the selected features and reply with a package
+ %containing the CF code and a reuse model suited
+ %for the requested configuration. 
+
+ %A reuse model contains all information needed by the framework
+ %regarding the base application in order to generate a ``Reuse Code''.
+ %An example of a reuse code is shown in Figure~\ref{fig:reuse_model} is
+ %shown an example of an instantiation of reuse model for the requested
+ %CF instance represented as a ``Reuse Form''. In this example,
+ %the fields related to the base application are already filled. The
+ %reuse model generated by the Proline-RM have these fields
+ %blank, since they should be completed by the application engineer.
+ 
+% It is important to point that the Reuse Code itself depends on the
+% Base Code during the build process, however, its definition   can be
+% made as soon as the base application design is complete.
+% The advantage of modularizing the reuse code allows repeating the  
+% code generation without affecting the base code, which is not 
+% possible on related works presented in the ``Related Works'' Section.
+
+%\begin{figure}[!h]
+%\centering
+%\includegraphics[width=0.46\textwidth,height=0.26\textheight]{figuras/reuse_form.\figext}
+%\caption{Reuse Model Form\label{fig:reuse_model}}
+%\end{figure}
+
+
+

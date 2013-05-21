@@ -1,0 +1,108 @@
+\relax 
+\citation{FranceMDD}
+\citation{aspectj}
+\citation{Clements}
+\citation{Fayad:1997:OAF:262793.262798}
+\citation{Mortensen_creatingpluggable,shah,soares,Kulesza06improvingextensibility,camanais,huang,zanon,lazanha,bynens,sakenou,cunha,soudarajan}
+\citation{Mortensen_creatingpluggable}
+\citation{bynens}
+\citation{camanais}
+\citation{Mortensen_creatingpluggable,shah,soares,Kulesza06improvingextensibility,camanais,huang,zanon,lazanha,bynens,sakenou,cunha,soudarajan}
+\citation{camanais}
+\@writefile{toc}{\contentsline {section}{\numberline {I}Introduction}{1}}
+\citation{camanais,sakenou,cunha,soudarajan}
+\citation{soares,camanais}
+\citation{shah}
+\citation{huang}
+\citation{soares}
+\citation{Mortensen_creatingpluggable}
+\citation{valterCFF}
+\citation{GMP}
+\newlabel{CFF}{{II}{2}}
+\@writefile{toc}{\contentsline {section}{\numberline {II}Crosscutting Frameworks}{2}}
+\@writefile{toc}{\contentsline {section}{\numberline {III}Model-Based Reuse Approach}{2}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Metamodel of the proposed models}}{2}}
+\newlabel{fig:metamodel}{{1}{2}}
+\newlabel{build_member}{{\unhbox \voidb@x \hbox {III-A}}{3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {III-A}}Reuse Example}{3}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Reuse Requirements Models and Reuse Models editor}}{4}}
+\newlabel{fig:model_editor}{{2}{4}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Reuse Code Fragment}}{4}}
+\newlabel{fig:reuse_code}{{3}{4}}
+\@writefile{toc}{\contentsline {section}{\numberline {IV}Evaluation}{4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-A}}Reuse Study Definition}{4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-B}}Maintenance Study Definition}{4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-C}}Study Planning}{5}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {IV-C}1}Context Selection}{5}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {IV-C}2}Formulation of Hypotheses}{5}}
+\@writefile{lot}{\contentsline {table}{\numberline {I}{\ignorespaces Hypotheses for the Reuse Study}}{5}}
+\newlabel{tab:hypotheses}{{I}{5}}
+\@writefile{lot}{\contentsline {table}{\numberline {II}{\ignorespaces Hypotheses for the Maintenance Study}}{5}}
+\newlabel{tab:hypotheses_maintenance}{{II}{5}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {IV-C}3}Variable Selection}{5}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {IV-C}4}Participant selection criteria}{5}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {IV-C}5}Design of the studies}{5}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {IV-C}6}Instrumentation for the Reuse Study}{5}}
+\@writefile{lot}{\contentsline {table}{\numberline {III}{\ignorespaces Study Design}}{6}}
+\newlabel{tab:stddesign}{{III}{6}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {IV-C}7}Instrumentation for the Maintenance Study}{6}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-D}}Operation}{6}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {IV-D}1}Preparation}{6}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {IV-D}2}Execution}{6}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {IV-D}3}Data Validation}{6}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {IV-D}4}Data Collection}{6}}
+\@writefile{lot}{\contentsline {table}{\numberline {IV}{\ignorespaces Reuse Process Timings}}{7}}
+\newlabel{tab:resulttime}{{IV}{7}}
+\@writefile{lot}{\contentsline {table}{\numberline {V}{\ignorespaces Maintenance Process Timings}}{7}}
+\newlabel{tab:resulttimemaint}{{V}{7}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-E}}Data Analysis and Interpretation}{7}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Reuse Process Timings Bars Graph}}{7}}
+\newlabel{fig:barsreuse}{{4}{7}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Maintenance Process Timings Bars Graph}}{7}}
+\newlabel{fig:barsmaint}{{5}{7}}
+\citation{gnur}
+\@writefile{lot}{\contentsline {table}{\numberline {VI}{\ignorespaces Average Timings}}{8}}
+\newlabel{tab:resultavg}{{VI}{8}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-F}}Hypotheses Testing}{8}}
+\@writefile{lot}{\contentsline {table}{\numberline {VII}{\ignorespaces Reuse Study T-Test Results}}{8}}
+\newlabel{tab:ttest_reuse}{{VII}{8}}
+\@writefile{lot}{\contentsline {table}{\numberline {VIII}{\ignorespaces Maintenance Study T-Test Results}}{8}}
+\newlabel{tab:ttest_maintenance}{{VIII}{8}}
+\@writefile{lot}{\contentsline {table}{\numberline {IX}{\ignorespaces Chi-squared test for outlier detection applied on Reuse Study}}{8}}
+\newlabel{tab:chi}{{IX}{8}}
+\@writefile{lot}{\contentsline {table}{\numberline {X}{\ignorespaces Chi-squared test for outlier detection applied on Maintenance Study}}{8}}
+\newlabel{tab:chimaint}{{X}{8}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Reuse Process Timings Bars Graph}}{8}}
+\newlabel{fig:reuselines}{{6}{8}}
+\citation{Cechticky:2003:GAF:954186.954203}
+\citation{Oliveira:2011:RET:2039458.2039832}
+\citation{Cechticky:2003:GAF:954186.954203}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Maintenance Process Timings Bars Graph}}{9}}
+\newlabel{fig:maintlines}{{7}{9}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-G}}Threats to Validity}{9}}
+\@writefile{toc}{\contentsline {section}{\numberline {V}Related Work}{9}}
+\bibstyle{IEEEtran}
+\bibdata{IEEEabrv,revisaoln}
+\bibcite{FranceMDD}{1}
+\bibcite{aspectj}{2}
+\bibcite{Clements}{3}
+\bibcite{Fayad:1997:OAF:262793.262798}{4}
+\bibcite{Mortensen_creatingpluggable}{5}
+\bibcite{shah}{6}
+\bibcite{soares}{7}
+\bibcite{Kulesza06improvingextensibility}{8}
+\bibcite{camanais}{9}
+\bibcite{huang}{10}
+\bibcite{zanon}{11}
+\bibcite{lazanha}{12}
+\bibcite{bynens}{13}
+\bibcite{sakenou}{14}
+\bibcite{cunha}{15}
+\bibcite{soudarajan}{16}
+\bibcite{valterCFF}{17}
+\bibcite{GMP}{18}
+\bibcite{gnur}{19}
+\bibcite{Cechticky:2003:GAF:954186.954203}{20}
+\bibcite{Oliveira:2011:RET:2039458.2039832}{21}
+\@writefile{toc}{\contentsline {section}{\numberline {VI}Conclusions}{10}}
+\@writefile{toc}{\contentsline {section}{References}{10}}

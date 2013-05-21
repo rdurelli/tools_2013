@@ -1,0 +1,98 @@
+
+ In order to assist the instantiation and composition of members of a CF we have put forward two new models, ``Reuse Requirements Model'' (RRM) and ``Reuse Model'' (RM).
+ These models have been devised on top of Eclipse Modeling Framework and Graphical Modeling Framework \cite{GMP}
+ The formal definition of both models is specified by a single metamodel, which is shown in Figure~\ref{fig:metamodel}.
+ This metamodel is a set of enumerations and metaclasses, which are either concrete or abstract.
+ 
+ \begin{figure}[!h]
+\centering
+\includegraphics[width=0.5\textwidth,height=.42\textheight]{figuras/metamodelo_separador.\figext}
+\caption{Metamodel of the proposed models\label{fig:metamodel}}
+\end{figure} 
+ 
+ The metamodel was built based on the vocabulary commonly used in the context of CFs.
+ Among these concepts, %here are .....These concepts were then maped into..."
+ %valter disse que da para diminuir
+% In order to create the metamodel,
+% an domain analysis regarding CFs was performed.
+% During the analysis, we identified the vocabulary employed in the context of CF reuse, 
+% which is important to represent objects, concepts and other entities related to the domain.
+% Among these concepts,
+ there are pointcuts, 
+ classifier extensions, 
+ method overriding to return values and variabilities selections.
+ These concepts were then mapped into concrete metaclasses, which are visible under the dashed line in Figure~\ref{fig:metamodel}.
+
+ Above the dashed line in Figure~\ref{fig:metamodel}, there are also the following enumerations: ``Visibility'', ``SuperType'' and ``CompositionType'',
+ which are sets of literals used as properties of the metaclasses.
+ The other elements above the line are abstract metaclasses. They were created after performing an analysis to generalize the properties of the concrete metaclasses.
+ These abstract metaclasses can be applied in similar approaches and
+ are also important to improve modularity and avoid code replication of the reuse code generator.
+ 
+ In Figure~\ref{fig:model_editor} there is an overview of our tool which is used to edit both of our proposed models.
+ On the right of Figure~\ref{fig:model_editor},  there is a ``Palette'' with the possible elements that can be inserted into these models.
+ These elements are instances of the concrete metaclasses of the metamodel, visible under the dashed line in Figure~\ref{fig:metamodel}.
+ Their uses are:
+ (\textit{I}) ``Group'': an element to group any element visible in the models, including child groups;
+ (\textit{II}) ``Pointcut'': employed to override abstract pointcuts which represent join-points of the base application code that should be affected by the  CF;
+ (\textit{III}) ``TypeExtension'': elements used to represent types found in the base application that must extend or implement classes, aspects or interfaces found in the CF; 
+ (\textit{IV}) ``Value'': elements used to override methods to return any numeric or textual values that must be informed while reusing the CF;
+ (\textit{V})  ``Option'': defines a selectable variability of the framework and
+ (\textit{VI})  ``OptionGroup'': group selectable variabilities of the framework. The last two elements are used to represent the variabilities provided by the CF that may be chosen by the application engineer.
+ The ``Group'' element is also employed to support feature hierarchy, however, details on feature selection are not shown on this paper. Nevertheless, more details related to both feature selection and the tool can be seen in another paper~\cite{101322}. This tool provides fully computational environment to the approach herein described.
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=1\textwidth,height=.23\textheight]{figuras/reuse_model_tool.\figext} 
+\caption{Reuse Requirements Models and Reuse Models editor\label{fig:model_editor}}
+\end{figure*}
+
+
+ 
+ Both of our proposed models have identical appearance, however, they are employed in different moments.
+ The first proposed model, the RRM, is a graphical documentation regarding the Reuse Requirements, which are related to the information needed to couple the CF to a base application, which is conventionally part of ``cookbook''. This model contains all of information regarding all CF features and  should be provided by a framework engineer.
+ The second model, the RM, is a subset of the RRM that only contains the features selected for reuse.
+  Since both models share the same metamodel, it is possible to employ a direct model transformation to instantiate a RM from a RRM by selecting a valid set of features.
+  Both of our models are represented as forms that contain boxes, as seen in  Figure~\ref{fig:model_editor}. Each box is an instance of a concrete metaclass element and represent a reuse requirement.
+ They also contain three lines, the first line contains a icon of the element type, which is the same type visible in the ``Palette'', and a name for the reuse requirement. The second line shows a description to facilitate the comprehension of the application engineer and the last line is filled by the application engineer to provide the information regarding the base application. Note that the last line is only used  in RMs.
+ 
+
+By analyzing the RRM, an application engineer should be able to learn which informations are required by the framework during the reuse process. This model also represents the variabilities provided by a framework that must be chosen by an application engineer. 
+ In order to instantiate a framework, the RRM may indicate the need of informing join-points of the base code where crosscutting behavior would be applied to, as well as classes, interfaces or aspect names that would be affected. Framework variabilities that must be chosen during reuse process are also visible.
+ For example, to be able to instantiate a persistence CF, the application engineer must specify methods from base application that should be executed after a database connection is opened and before it is closed. It is also needed to specify methods that represent data base transactions, and the variabilities must be chosen, e.g., the driver which should be used to connect to the database system. 
+
+ The other model, the RM, is shown in Figure~\ref{fig:model_editor}. It supports the reuse process of a crosscutting framework. It is intended that the reuse process can be completely executed by completing the third line of the boxes of this model.
+ Therefore, it should be used by the application engineer in order to reuse a framework.  
+ For instance, the value ``\textit{base.Customer.opening()}'' is a method of the base application and was inserted by the application engineer in the third line of box ``Connection Opening''. 
+
+
+After the application engineer fills in the RM with the information needed by an member of a CF, it is possible to generate the final reuse code. 
+To illustrate the use of these models we have used the ``persistence'' CF described in Section~\ref{CFF}. %This CFF was devised earlier by our research group~\cite{valterCFF}. In Figure~\ref{fig:AllCFFAvailable} (marked with I), a feature model denoting this CFF is shown. The ``persistence'' CFF allows the creation of several different members or CFs. %Each feature is a software package in which contains source code (e.g., classes, aspects and methods) related to a feature. 
+%Further details are presented in the next section.
+
+
+
+%In order to assists the instantiation of members of a CFF we have put forward two new model models, ``Reuse Requirements model'' (RRM) and ``Reuse model'' (RM). The aims of RRM is represents the reuse documentation in high level. The main idea is to release this model along with the CFF to support its reuse process by the application engineers. It is a graphical model which is used to document the information needed by the CFF to be reused. That information include join-point of the base application where the members of CFF may crosscut, classes, interfaces and aspects of the base application. The second one, RM, supports the reuse process of a crosscutting framework. It is intended that the reuse process can be completely executed by filling in this model. Therefore, it is used by the application engineer in order to reuse a member of a CFF.
+
+
+
+
+
+
+
+%Both ``Persistence'' and ``Connection'' are mandatory features. The first one, aims to introduce a set of persistence operations into applications persistence classes (e.g., store, remove, update, perform queries). The second feature, is related to the database connection concern and identifies points in the application code where the connection must be opened and closed. This feature has variabilities, as for example the DBMS (Data Base Management System (DBMS)) (e.g., MySQL, SyBase, Native and Interbase). The feature model has two optional features as well. The former is called ``Caching'', which is responsible to deals with high-performance to gets datas of the databases.
+%The second, named ``Pooling'' represents a set of database connections maintained by the databases.
+
+%After either develop the CFF or choose a CFF the domain engineer should model the RRM, indicating graphically the information needed to couple it to a base application. Due space limitations, we do not present this model, but an example can be seen in another paper \cite{gottardiwasp2011}.   
+
+%Upon finishing this process, the domain engineer would have a set of artifacts i.e., a feature model in which describes both commons and variability features of a CFF, a Reuse Requirements model of the CFF and CFF source code. These artifacts have to be uploaded in a remote repository in order to be reused by the application engineer. To assist this step we have devised an infrastructure called ProLine-RM. 	
+
+%The last artifact that has to be created in DE phase is the RRM. The aim of this artifact is documents the persistence CFF and represents its reuse requirements, information that must be informed by the application developer during AE phase. Due space limitations, we do not present this artifact, but an example of this artifact can be seen at [?].
+
+
+
+
+%Afterwards, the domain engineer has to developed the ``Reuse Requirements model'' (RRM).    
+
+
+%To the best of our knowledge, there are no an approach that shares, managements, provides full cycle of reuse of the CFF and even supplies a way to examine previously if the features available in one CFF fulfill the application requirements. In order to overcome these absence we put forward an approach and a plug-in named Proline-RM acronym for Product Line-Repository Manager, which aims to increase the level of manager and accelerate the instantiation of members belonging to a given CFF. The use of the approach is twofold, the Domain Engineering (DE) where all artifacts are developed and upload to a remote server, and the Application Engineering (AE), where the reuse is done effectively. These phases is described in the next two sections, respectively.  

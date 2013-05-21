@@ -1,0 +1,83 @@
+ The data of the first study is found on Table~\ref{tab:resulttime}, which is ordered by the time taken to complete the process. The first notorious information found on this table is that the model-based reuse tool, which is identified by the letter `M', is found on the first twelve results. The conventional process, which is identified by the letter `C', got the last four results.
+
+The timings data of  Table~\ref{tab:resulttime} is also represented graphically in a bar graph, which is plotted on Figure~\ref{fig:barsreuse}. The  same identifying code for each participant and the elapsed time in seconds are visible on the graph. The bars for conventional technique and model tool use are paired for each participant, allowing easier visualization of the amount of time taken by each of them.
+
+\begin{figure}[!h]
+\centering
+\setlength{\tabcolsep}{0pt}
+\begin{tabular}{c c}
+\sreal & \sspare \\
+\includegraphics[width=0.244\textwidth,height=.12005\textheight]{figuras/bars_graph_reuse_real.\figext} &
+\includegraphics[width=0.244\textwidth,height=.12005\textheight]{figuras/bars_graph_reuse_spare.\figext} \\
+\end{tabular}
+\caption{Reuse Process Timings Bars Graph\label{fig:barsreuse}}
+\setlength{\tabcolsep}{6pt}
+\end{figure}
+
+The second important information  found on the first study is that is not a single participant that could reuse the framework faster by using the conventional process in the same activity than by using the reuse tool.
+
+The data of the second study is found on Table~\ref{tab:resulttimemaint}. This study has provided similar results. The first eleven values were scored by using the model-based tool while the last four were scored by using the conventional tool. Only the participant number 16 was able to reuse the framework faster by using the conventional process, which contradicts the results taken from the same participant in the previous study. There is also a bar graph for this study in Figure~\ref{fig:barsreuse}.      
+
+The plots for the maintenance study are found on Figure~\ref{fig:barsmaint}, which also follow the same guidelines used while plotting the graphs for the previous study.
+Considering the timings of the maintenance study,  the reuse model edition does not provide advantage in terms of productivity when maintaining an application that reuses a CF, since most of participants took longer to edit the model than the reuse code.
+
+
+\begin{figure}[!h]
+\centering
+\setlength{\tabcolsep}{0pt}
+\begin{tabular}{c c}
+\sreal & \sspare \\
+\includegraphics[width=0.244\textwidth,height=.12005\textheight]{figuras/bars_graph_maintenance_real.\figext} &
+\includegraphics[width=0.244\textwidth,height=.12005\textheight]{figuras/bars_graph_maintenance_spare.\figext} \\
+\end{tabular}
+\caption{Maintenance Process Timings Bars Graph\label{fig:barsmaint}}
+\setlength{\tabcolsep}{6pt}
+\end{figure}
+
+On  Table~\ref{tab:resultavg} there are average timings and their proportions. By considering the average time the participants of both groups needed to complete the processes, the conventional technique took approximately 97.64\% longer than the model-based tool.
+
+\begin{table}[h]
+\centering
+\caption{Average Timings\label{tab:resultavg}}
+\resizebox{.48\textwidth}{!}
+{\begin{tabularx}{
+.50\textwidth}{|c|c|l|X|r|}
+\hline   \centering \cellcolor[gray]{\shadow} A.& \cellcolor[gray]{\shadow}  Tech. & \multicolumn{1}{c|}{\cellcolor[gray]{\shadow}  Avg.} &  \centering  \cellcolor[gray]{\shadow} Sum of Avg. &  
+\multicolumn{1}{c|}{\cellcolor[gray]{\shadow} Percents} \\ %
+\hline \multicolumn{5}{|c|}{\cellcolor[gray]{\lightgray}Reuse Study}\\
+\hline \sreal & \multirow{2}{*}{Conv.} &  16:13.44008 &  \multirow{2}{*}{30:03.79341}& \multirow{2}{*}{66.7766\%}\\%"\\%"
+\cline{1-1} \cline{3-3} \sspare &  &  13:50.35333 &  &   \\%"
+
+\hline \sreal & \multirow{2}{*}{Model} &  08:04.980525 &  \multirow{2}{*}{14:57.441176}& \multirow{2}{*}{33.2234\%}\\%"\\%"
+\cline{1-1} \cline{3-3} \sspare &   &  06:52.460651 & &  \\%"
+\hline \multicolumn{2}{|c|}{Total} & \multicolumn{2}{c|}{45:01.234586} & 100.0000\% \\%"
+\hline \multicolumn{5}{|c|}{\cellcolor[gray]{\lightgray}Maintenance Study}\\
+\hline \sreal & \multirow{2}{*}{Conv.} &  06:57.498758 &  \multirow{2}{*}{13:55.762733}& \multirow{2}{*}{39.5521\%}\\%"\\%"
+\cline{1-1} \cline{3-3} \sspare &  &  06:58.263975 &  &   \\%"
+
+\hline \sreal & \multirow{2}{*}{Model} &  12:43.152626 &  \multirow{2}{*}{21:17.305521}& \multirow{2}{*}{60.4479\%}\\%"\\%"
+\cline{1-1} \cline{3-3} \sspare &   &  08:34.152895 & &  \\%"
+\hline \multicolumn{2}{|c|}{Total} & \multicolumn{2}{c|}{ 35:13.068254} & 100.0000\% \\%"
+\hline 
+\end{tabularx}
+}
+\end{table}
+
+
+
+%--avg real convencional "00:16:13.44008"
+%--avg real modelos "00:08:04.980525"
+%--avg reserva conv "00:13:50.35333"
+%--avg reserva modelos  "00:06:52.460651"
+
+
+%--avg real erros convencional "00:06:57.498758"
+%--avg real erros modelos ""00:12:43.152626""
+%--avg reserva erros conv "00:06:58.263975"
+%--avg reserva erros modelos  "00:08:34.152895"
+
+%The study values are also shown as bar graphs in order to better
+%identify the differences between the timings of each technique.
+%In Figures~\ref{fig:barsreal} and \ref{fig:barsspare} there are graphics plotted to represent the experiment data found on the Tables~\ref{tab:resulttime} and \ref{tab:resulttimesp}, respectively.
+
+

@@ -1,0 +1,53 @@
+In this section, a member of the ``persistence'' CFF is instanced by using the infrastructure and the models that we have proposed.
+
+Firstly, the engineer has to look in the repository and determine whether there are some CFF(s) which can be reused, to make easier and faster the development of the base application. In this case the ``persistence'' CFF has been chosen. In order to assist this activity, the infrastructure ProLine-RM provides a graphical user interface in which depicts all CFFs that have been uploaded by the engineers in the DE phase. Next, ProLine-RM transfers the feature model belonging to the ``persistence'' CFF from the remote repository to the application engineer computer.
+
+<<<<<<< .mine
+Secondly, to reuse the ``persistence'' CFF, its features must be chosen by the application engineer aiming to specify explicitly which features will be used in the application base. This is important because usually the CFFs have a great deal of features that probably will not be used in the application base. To assist this activity ProLine-RM uses a file named ``configuration file''. This file is created based on the feature model downloaded. Thus, ProLine-RM reads the feature model and creates a ``tree hierarchy''. By using this ``configuration file'', features can be chosen by the application engineer. The ``configuration file'' related to the ``persistence'' CFF is shown in Figure~\ref{fig:AllCFFAvailable} (ii). Moreover, it is interesting to provide a way to validate if the selected features match a valid combination for the instantiation of a member of the CFF, since, certain combinations of features may not lead to useful variants (e.g., in our example the ``persistence'' CFF only a single database connection may be used). ProLine-RM supports this validation automatically. As shown in Figure~\ref{fig:AllCFFAvailable}(ii) once the engineer has chosen the features represented by ``+'', the resulting variant and constraints are generated automatically which are represented by ``-''.
+=======
+Secondly, to reuse the ``persistence'' CFF, its features must be chosen by the application engineer aiming to specify explicitly which features will be used in the application base. This is important because usually the CFFs have a great deal of features that probably will not be used in the application base. To assist this activity ProLine-RM uses a file named ``configuration file''. This file is created based on the feature model downloaded. Thus, ProLine-RM reads the feature model and creates a ``tree hierarchy''. By using this ``configuration file'', features can be chosen by the application engineer. The ``configuration file'' related to the ``persistence'' CFF is shown in Figure 3 (iii). Moreover, it is interesting to provide a way to validate if the selected features match a valid combination for the instantiation of a member of the CFF, since, certain combinations of features may not lead to useful variants (e.g., in our example the ``persistence'' CFF only a single database connection may be used). ProLine-RM supports this validation automatically. As shown in Figure~\ref{fig:AllCFFAvailable}(iii) once the engineer has chosen the features represented by a plus sign (`+'), the resulting variant and constraints are generated automatically which are represented by a minus sign (`-').
+>>>>>>> .r92
+
+Thirdly, the application engineer has to submit this validated ``configuration file'' to the remote repository where all CFFs persist. Using this ``configuration file'' the repository will carry out an algorithm. This algorithm aims to extract only the codes (e.g., classes, aspects, and packages) and the Reuse Diagram related to the features that was chosen by the engineer. After that, these artifacts are sent by the repository to the application engineer computer. This Reuse Diagram includes information that must be informed by the application developer during reuse process. The Reuse Diagram related to the ``persistence'' CFF is shown in the Figure~\ref{fig:AllCFFAvailable} (iii). Therefore, the creation of a base application design compatible to the framework should be possible, and after the design is complete, the form should be filled. The methods found in the base application are referenced to fill the information required by the framework pointcuts. For example, the Reuse Diagram related to the ``persistence'' CFF is completed with information of a base application. The pointcuts ``Connection Opening'', ``Connection Closing'' and ``Transaction Methods'' are intended to capture specific join-points of the base application, e.g. names of methods of the base application that will be affected by the framework. The first two represent, respectively, method executions that should occur after a database connection is open or before it is closed. The last pointcut represents methods that encapsulate data transactions.
+
+The ``Persistent Objects'' is a type extension definition, then, it may represent either a class or an interface that should be extended or implemented by a base class or interface. In this case, the application engineer must supply names of classes (or their super-types) which represent objects that should be persisted on the database.
+
+%The following elements represent framework variabilities that should be chosen or defined by the application developer. ``Value definitions'' represent values that should be informed to the framework and ``Options'' represent predefined options that should be chosen by the application engineer. The application engineer may define the selected option or options by setting true or false for each option.
+
+%``Connection Pools Number'' is an integer value which is used to inform the framework how many database connections should be kept open by the connection pool. 
+``Dirty Objects Controller'' is a boolean value which is used to define if the dirty objects controller should be active. This is used to update the database records automatically as soon as any attribute belonging to a persistent object is changed by a set method. ``Database Username'' and ``Database Password'' are string values that are used to define the username and password needed to log into the database system. ``Database Connection String'' is a string value which should be used to specify the database connection details, i.e., the database system address, port and database name.
+
+%``Database connection driver'' is an option group, representing possible connections that may be chosen by the application engineer, either native driver connection or via ODBC. ``Database System'' is an option group which represents the implementation of the database management system. The application engineer should select the database system which the application should connect to. ``Obliviousness level'' is an option group that represents the level of obliviousness found on the base application classes. ``Total obliviousness'' means that the base application does not need to call any method in order to save the persistent objects, however, when the ``Partial obliviousness'' is set, the base application must call an method inherited by persistent objects.
+
+% There are three referenced ``Persistent Objects''; their classes will receive methods and crosscutting behavior in order to implement the persistence concern.
+
+After completing the Reuse Diagram, it is possible to execute a code generator, which is a model to code transformation tool capable of generating a reuse code in AspectJ, illustrated on Figure~\ref{fig:reuse_code}, which allows coupling the base application to the framework in a separate module. The final software is the composition of base application code, reuse code for each reused framework and the code of reused frameworks.
+
+In the first aspect, the three pointcuts are implemented by extending an abstract aspect of the framework with information of the methods found in the base application. In the second aspect, the type extension is implemented, then the classes ``Customer'', ``Resource'' and ``Order'' receive an interface of the framework, which is used to apply crosscutting behavior. In the third aspect, the values are set by overriding methods of the framework. The interface ``SelectedManager'' is implemented by classes which extend the selected database connection. However it is not visible in this paper, due to size limitations.
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=\figwidth,
+height=0.2999\textheight
+]{figuras/reuse_code.\figext}
+\caption{Reuse Code Fragment\label{fig:reuse_code}}
+\end{figure}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

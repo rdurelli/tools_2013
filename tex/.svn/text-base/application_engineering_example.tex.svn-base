@@ -1,0 +1,98 @@
+
+Firstly, the engineer has to look in the repository and determine whether there are some CFF(s) which can be reused, to make easier and faster the development of the base application. 
+In order to assist this activity, ProLine-RM provides a table in which depicts all CFFs that have been uploaded by the engineers in the DE phase.
+Figure~\ref{fig:AllCFFAvailable}(iv) shows this table. 
+As can be seen there are five different CFFs - persistence, security, distribution, concurrency and logging, respectively. 
+In addition, ProLine-RM also shows descriptions for each of the selected CFFs by clicking on the button ``Description''. 
+Using this description the engineer can choose the CFFs. 
+Nevertheless, if this description is not enough to help the engineer takes a decision on reusing the CFF, ProLine-RM supplies a way to allow the engineer visualizes the feature model related to selected CFF by clicking on the button ``View''. 
+As is shown in Figure~\ref{fig:AllCFFAvailable}(iv) the ``persistence'' CFF is highlighted meaning that it has been chosen. 
+Next, the ``Download'' button has to be clicked to transfer the feature model belonging to the CFF chosen from the remote repository to the engineer computer.
+
+Secondly, to reuse the CFF its features must be chosen by the engineer aiming to specify explicitly which features will be used in the application base. This is important because usually the CFFs have a great deal of features that probably will not be used in the application base. To assist this activity ProLine-RM uses a file named ``configuration file''. This file is created based on the feature model downloaded. ProLine-RM reads the feature model and creates a ``tree hierarchy''. By using this ``configuration file'' features can be chosen by the engineer. The ``configuration file'' related to the ``persistence'' CFF is shown in Figure~\ref{fig:AllCFFAvailable}(iii). Moreover, it is interesting to provide a way to validate if the selected features match a valid combination for the instantiation of a member of the CFF, since, certain combinations of features may not lead to useful variants (e.g., in our example the ``persistence'' CFF only a single database connection may be used). ProLine-RM support this validation automatically. As shown in Figure~\ref{fig:AllCFFAvailable}(iii) once the engineer has chosen the features (represented by ``+''), the resulting variant and constraints are generated automatically (represented by ``-''). 
+
+Thirdly, the engineer has to submit this validated ``configuration file'' to the remote repository where all CFFs persist. Using this ``configuration file'' the repository will carry out an algorithm. This algorithm aims to extract only the codes (e.g., classes, aspects, and packages) and the Reuse Model related to the features that was chosen by the engineer. After that, these artifacts are sent by the repository to the ProLine-RM. This Reuse Model sent by the repository includes information that must be informed by the application developer during reuse process.  %An initial Reuse Model is defined by a framework developer regarding the provided framework, including information that must be informed by the application developer during reuse process.
+%The ``Reuse Requirement Diagram'' includes informations that must be informed by the application engineer in order to reuse the CF correctly. 
+The pointcuts ``Connection Opening'', ``Connection Closing'' and  ``Transaction Methods'' are intended to capture specific join-points of the base application, e.g. names of methods of the base application that will be affected by the framework.
+The first two represent, respectively, method executions that should occur after a database connection is open or before it is closed. The last pointcut represents methods that encapsulate data transactions.
+%The framework is able of capturing these join-points and 
+%which should be. The database should address these properly.% Due to AspectJ limitations, pointcut definitions are always mandatory.%explicar bem?
+%Since the code generated is in AspectJ, all of these pointcuts definitionsare mandatory
+
+The ``Persistent Objects'' is a type extension definition, then, it may  represent either a class or an interface that should be extended or implemented by a base class or interface. In this case, the application engineer must supply names of classes (or their super-types) which represent objects that should be persisted on the database.
+
+The following elements represent framework variabilities that should be chosen or defined by the application developer. ``Value definitions'' represent values that should be informed to the framework and ``Options'' represent predefined options that should be chosen by the application engineer. The application engineer may define the selected option or options by setting true or false for each option. 
+
+``Connection Pools Number'' is an integer value which is used to inform the framework how many database connections should be kept open by the connection pool.
+``Dirty Objects Controller'' is a boolean value which is used to define if the dirty objects controller should be active. This is used to update the database records automatically as soon as any attribute belonging to a persistent object is changed by a set method.
+``Database Username'' and ``Database Password'' are string values that are used to define the user-name and password needed to log into the database system.
+``Database Connection String'' is a string value which should be used to specify the database connection details, i.e., the database system address, port and database name.
+
+``Database connection driver'' is an option group, representing possible connections that may be chosen by the application engineer, either native driver connection or via ODBC.
+``Database System'' is an option group which represents the implementation of the database management system. The application engineer should select the database system which the application should connect to.
+``Obliviousness level'' is an option group that represents the level of obliviousness found on the base application classes. ``Total obliviousness'' means that the base application does not need to call any method in order to save the persistent objects, however, when the ``Partial obliviousness'' is set, the base application must call an  method inherited by persistent objects.
+
+
+%The RD on Figure~\ref{tab:figex2} have elements similar to those found on RRD.
+%However, this diagram represents a lower level of abstraction of the reuse process.
+%This diagram is defined by the application engineer, and is used to inform the reuse process details of the base application that will be used to couple it to the framework. Then, the model elements do not have description in natural language, instead, they are provided with identifier names from the base application that must be known by the framework portion of the final system.
+
+%The RD encompasses all pointcuts, which are mandatory, and a subset of the optional requirements.
+
+After learning about the information needed by the framework, the creation of a base application design compatible to the framework should be possible, and after the design is complete, the form should be filled.
+The methods found in the base application are referenced to fill the information required  by the framework pointcuts. 
+For example, the form in Figure~\ref{tab:figex2} is completed with information of a base application. There are three referenced ``Persistent Objects''; their classes will receive methods and crosscutting behavior in order to implement the persistence concern.
+
+There are four selected values on the right of the figure. The first one is used to define if the objects should be saved automatically upon modifying their attributes, which can be performed by the ``Dirty Objects Controller''. The second is employed to define the connection string, finally, the other two inform the connection user-name and password.
+
+
+After completing the Reuse Model Form, it is possible to execute a code generator, which is a model to code transformation tool capable of generating a reuse code in AspectJ, illustrated on Figure~\ref{fig:reuse_code}, which allows coupling the base application to the framework in a separate module. The final software is the composition of base application code, reuse code for each reused framework and the code of reused frameworks.
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=\figwidth,
+%height=0.304212\textheight
+height=0.2999\textheight
+%height=0.18\textheight
+]{figuras/reuse_code.\figext}
+\caption{Reuse Code Fragment\label{fig:reuse_code}}
+\end{figure}
+
+
+
+In the first aspect, the three pointcuts are implemented by extending an abstract aspect of the framework with information of the methods found in the base application. 
+In the second aspect, the type extension is implemented, then the classes ``Customer'', 
+``Resource'' and 
+``Order'' receive an interface of the framework, which is used to apply crosscutting behavior.
+In the third aspect, the values are set by overriding methods of the framework. The interface ``SelectedManager'' is implemented by classes which extend the selected database connection. However it is not visible in this paper, due to size limitations. 
+
+
+
+
+%In this paper, a tool was implemented to  support the proposed process.
+%The tool is capable of presenting the proposed model as a form %representing Reuse Requirements Diagrams and Reuse Diagrams.
+%and is also able to transform the model to generate reuse code.
+%In this section, a case study is shown.%
+%For example, we employed the tool to perform the reuse process on a Crosscutting Framework that modularizes the persistence concern \citep{camanais}.
+%This framework is used to manage the persistence of objects in a database without requiring to write code about this concern in the base application.
+%Simply by writing a reuse code to inform the framework which are the classes that represent objects to be persisted, informing which methods depend on database connections and how to connect to the database system, it is possible
+%to couple a compatible base application to a database system.
+
+
+%In this case study, a Persistence CF is considered during reuse process. Its class diagram is shown on Figure~\ref{fig:cf}.
+%The base application is a simple single class application which contains the class ``Customer'', as seen on Figure~\ref{fig:base}.
+%
+%\begin{figure}[!h]
+%\centering
+%\includegraphics[width=.2\textwidth]{Customer.eps}
+%\caption{Base Application. \label{fig:base}}
+%\end{figure}
+
+%\begin{figure*}[!t]
+%\centering
+%\includegraphics[width=1\textwidth]{CFExample.eps}
+%\caption{Persistence CF  \cite{camargophd}. \label{fig:cf}}
+%\end{figure*}
+
+ 
+

@@ -1,0 +1,39 @@
+
+\textbf{Internal Validity: }
+
+\begin{itemize}
+\item	 Experience Level of Participants: the varied participant knowledge that could affect the collected data.
+To mitigate this threat, we divided the participants in two balanced groups considering the experience level and rebalanced the groups considering the preliminary results. 
+Also, the participants had prior experience on how to reuse the CF conventionally.
+During the training, the participants were trained on how to reuse the CF with the model-based tool and then again on how to reuse it conventionally, which could cause the participants to have more experience with the conventional technique.
+
+
+\item	Productivity under evaluation: there is a possibility that this might influence the experiment results because students often tend to think they are being evaluated by experiment results. In order to mitigate this, we explained to the students that no one was being evaluated and their participation was considered anonymous.
+
+\item Facilities used during the study:
+different computers and installations could affect the recorded timings.
+However, the different groups used the same configuration, make, model and operating system in equal numbers and the participants were not allowed to change their machines during in the same activity, which means that a participant could not reuse a framework conventionally by using a different computer that was used to reuse it with our tool.
+\end{itemize}
+
+\textbf{Validity by Construction:}
+\begin{itemize}
+\item	Hypothesis expectations: the participants already knew the researchers and knew that the model-based tool was supposed to ease the reuse process, which reflects one of our hypothesis. Both of these issues could affect the collected data and cause the experiment to be less impartial. In order to avoid impartiality, we enforced that the participants had to
+keep a steady pace during the whole study.
+
+\end{itemize}
+
+\textbf{External Validity:}
+\begin{itemize}
+\item	Interaction between configuration and treatment: 
+	it is possible that the reuse exercises are not accurate for every reuse of a crosscutting framework for real world applications.
+	Only a single crosscutting framework was considered and the base applications had the same complexity.
+	To mitigate this threat, the exercises were designed considering applications based on the real world.
+\end{itemize}
+
+\textbf{Conclusion Validity:}
+\begin{itemize}
+\item	Measure reliability: it refers to metrics used to measuring the reuse effort. To mitigate this threat we have used only the time taken which was captured by an information system in order to allow greater precision; 
+
+\item		Low statistic power: the ability of a statistic test in reveal reliable data. To mitigate we applied three 
+{T-Tests} to statistically analyze the experiment data. 
+\end{itemize}

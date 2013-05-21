@@ -1,0 +1,24 @@
+This section is reported all activities of the DE, which is depicted in Figure~\ref{fig:domain_engineering}. In order to illustrate such as activities a ``persistence'' CFF have been developed. As can be seen in Figure~\ref{fig:AllCFFAvailable}(i) the first activity the domain expertise has to be gotten (`A'). Therefore, in this activity the domain related to ``persistence'' has been studied. The outcome of such study were the identification of both the common features of the domain and its variations. 
+
+%Therefore, in order to illustrate DE phase we have developed a persistence CFF
+%Therefore, in order to illustrate such as report the domain related to ``persistence'' has been chosen.
+After identifying the features of the CFF the next activity is the development of the CFF effectively (`B'). In order to accomplish this activity we have used the approach described in~\cite{valterCFF}, its aims is to assist and make easier the developed of the CFF by using the aspect oriented paradigm~\cite{Kiczales97aspect-orientedprogramming}.
+
+Afterwards, the feature model depicting all features related to the domain has to be modeled (`C'). Figure~\ref{fig:FeatureModel} shows the feature model that we have developed. As can be seen, there are two mandatory features. The first one, called ``Persistence'', aims to introduce a set of persistence operations into applications persistence classes (e.g., store, remove, update, perform queries). The second feature, named ``Connection'' is related to the database connection concern and identifies points in the application code where the connection must be opened and closed. This feature has variabilities, as for example the DBMS~\footnote{Data Base Management System (DBMS) is a software package with computer programs that control the creation, maintenance, and use of a database} (e.g., MySQL, SyBase, Native and Interbase). The feature model has two optional features as well. The former is called ``Caching'', which is responsible to deals with high-performance to gets datas of the databases.
+The second, named ``Pooling'' is represented a set of database connections maintained by the databases.
+
+The last artifact that has to be created in DE phase is the RRM. The aim of this artifact is documents the persistence CFF and represents its reuse requirements, information that must be informed by the application developer during AE phase. Due space limitations, we do not present this artifact, but an example of this artifact can be seen at~\cite{gottardiwasp2011}. 
+
+
+
+
+After developing the CFF, its feature model and its RRM them have to be uploaded in a remote repository in order to be reused during the AE phase. Prior to uploading these artifacts, informations (e.g., Name of CFF, Author(s) and a Description) related to the CFF must be filled in. Figure~\ref{fig:AllCFFAvailable}(ii) shows an example wherein the persistence CFF, the feature model and the RRM are being uploaded.
+%An initial Reuse Model is defined by a framework developer regarding the provided framework, including information that must be informed by the application developer during reuse process.
+%The ``Reuse Requirement Diagram'' includes informations that must be informed by the application engineer in order to reuse the CF correctly. 
+%The pointcuts ``Connection Opening'', ``Connection Closing'' and  ``Transaction Methods'' are intended to capture specific join-points of the base application, e.g. names of methods of the base application that will be affected by the framework.
+
+% all artifacts (e.g., its abstract concepts, entities, relationship) have been identified and documented  crucial in determining all    In this activity the engineer is analyzed the domain to get the expertise related to ``persistence''     
+
+%In order to show an example of the DE phase the domain related to ``persistence'' has been chosen. Thus, this section is described all activities depicts in Figure~\ref{fig:domain_engineering}. 
+
+%This section is described an example of the DE phase. As can be seen in Figure~\ref{fig:domain_engineering} the first activity performed during this phase is the \textit{Analyze Domain}. As an example 

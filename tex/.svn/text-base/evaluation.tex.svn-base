@@ -1,0 +1,6 @@
+Two experiments were conducted to compare our reuse tool with the conventional technique.
+The first experiment is called ``Reuse Study'' and was planned to identify the gains in productivity when reusing a framework, which is the main objective of our tool.
+The second experiment is referred as ``Maintenance Study'' and was planned to identify whether the reuse models help or not the maintenance of an application that uses a CF and needs modifications. 
+This second study is important because maintenance activities are usually performed more times than the reuse process.
+%In this section, the first study is referred as ``Reuse Study'' and the second study is referred as ``Maintenance Study''.
+Each experiment was applied twice. In this paper, the first execution is referred as ``Primary'' and the second execution is referred as ``Secondary''. Since there are two executions for each experiment, we present four study executions in this section.

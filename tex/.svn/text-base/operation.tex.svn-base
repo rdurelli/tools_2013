@@ -1,0 +1,134 @@
+\subsubsection{Preparation}
+At first, every student was introduced to the tool and was taught how to edit reuse codes and reuse models.
+During each phase of the reuse study, the students were required to reuse the CF with a provided application.
+During the maintenance study, the students had to fix a reuse code or reuse model to complete the process.
+Every participant had to reuse and maintain every application by using only one of the techniques in equal numbers.
+Also, at any moment of the experiment, each group was using a different technique than the other group.
+
+\subsubsection{Execution}
+Initially, the participants signed a consent form and then answered a characterization form.
+The characterization form had questions regarding knowledge about AspectJ constructs, Eclipse IDE and Crosscutting Frameworks.
+
+After concluding the characterization forms, participants were trained on how to reuse the supplied CF with the model-based reuse tool and then conventionally. It is important to note that every participant already had  a basic experience with AspectJ and the conventional reuse of crosscutting frameworks.
+
+Following the training, the pilot experiment was executed. The participants were split into two groups considering the results of the characterization forms. The pilot experiment was intended to simulate the real experiments, except that the applications were different, but equivalent. During the pilot experiment, the participants were allowed to ask questions about any issues they did not understand during the training. This could affect the validity, then, the data from this activity was only used to rebalance the groups.
+
+During the real experiments, the participants had to work with two applications starting with a different technique for each group. The secondary executions were replications of the primary executions with another two applications. They were created in order to avoid the risk of getting unbalanced results during the primary execution, since some data gathered during the pilot were rendered invalid.
+
+
+\subsubsection{Data Validation}
+The forms filled by the participants were confirmed with preliminary data gathered during the pilot study.
+The researchers also watched the information system notifications to confirm if the participants had concluded and the  captured data.
+
+\subsubsection{Data Collection}
+The recorded timings during the reuse processes with both techniques are listed on the Table~\ref{tab:resulttime}.
+The timings for the maintenance  study are found on Table~\ref{tab:resulttimemaint}.
+There are five columns in each of these tables, ``G'' stands for the group of the participant during the activity; ``A'' stands for the application being reused; ``T'' stands for the reuse technique which is either ``C'' for conventional or ``M'' for model-based tool; ``P'' column lists an identifying code of the participants (students), whereas the least eight values are allocated to post-graduate students and the rest are undergraduate students;
+``Time'' column lists the time the participant spent to complete each phase.
+
+The  information system employed to gather the experiment data stored the timings with milliseconds precision considering both the server and clients system clocks. However, the values presented in this paper only consider the server time, then, the delay of transmission by the computers are not considered, which are believed to be insignificant in this case, because preliminary calculations considering the client clocks did not change the order of results.
+
+That system was able to gather the timings and supplied information transparently. The participants only had to execute the start time, which was supervised, and work on the processes by themselves. Once the test case provided had successful results, which meant that the framework was correctly coupled, the finish time was automatically submitted to the server before notifying the success to the participant.
+
+%A &   G &   App. &   T &   S &    Time  \\ %
+
+\begin{table}[h]
+\caption{Reuse Process Timings\label{tab:resulttime}}
+%~~\\
+\resizebox{0.425\textwidth}{!}
+{\centering
+\begin{tabularx}{
+0.50\textwidth}{|c|c|c|c|c|X|c|c|c|c|c|}
+\cline{1-5}  \cline{7-11}
+\multicolumn{5}{|c|}{ \cellcolor[gray]{\shadow} Real Study} & &  \multicolumn{5}{|c|}{\cellcolor[gray]{\shadow} Spare Study}  
+\\
+\cline{1-5}  \cline{7-11}   \cellcolor[gray]{\lightgray} G & \cellcolor[gray]{\lightgray}  A & \cellcolor[gray]{\lightgray}  T & \cellcolor[gray]{\lightgray}  P & \cellcolor[gray]{\lightgray}   Time 
+& &
+\cellcolor[gray]{\lightgray}  G & \cellcolor[gray]{\lightgray}  A & \cellcolor[gray]{\lightgray}  T & \cellcolor[gray]{\lightgray}  P & \cellcolor[gray]{\lightgray}   Time 
+\\ %
+\cline{1-5} \cline{7-11} 1 & F & M & 15 & 04:19.952015 & & 2 & C & M & 10 & 02:59.467569\\%"
+\cline{1-5} \cline{7-11} 1 & F & M & 13 & 04:58.604963 & & 1 & R & M & 13 & 03:56.785359\\%"
+\cline{1-5} \cline{7-11} 1 & F & M & 8  & 05:18.346829 & & 1 & R & M & 15 & 04:23.629206\\%"
+\cline{1-5} \cline{7-11} 2 & D & M & 11 & 05:24.249952 & & 2 & C & M & 11 & 04:25.196135\\%"
+\cline{1-5} \cline{7-11} 2 & D & M & 5  & 05:31.653952 & & 1 & R & M & 8  & 04:33.954349\\%"
+\cline{1-5} \cline{7-11} 2 & D & M & 9  & 05:45.484577 & & 2 & C & M & 9  & 04:41.254920\\%"
+\cline{1-5} \cline{7-11} 2 & D & M & 3  & 06:16.392424 & & 1 & R & M & 12 & 05:05.524264\\%"
+\cline{1-5} \cline{7-11} 2 & D & M & 10 & 06:45.968790 & & 2 & C & M & 3  & 05:45.333167\\%"
+\cline{1-5} \cline{7-11} 2 & D & M & 14 & 07:05.858718 & & 2 & C & M & 14 & 05:57.009310\\%"
+\cline{1-5} \cline{7-11} 2 & D & M & 6  & 07:39.300214 & & 2 & C & M & 5  & 06:31.365498\\%"
+\cline{1-5} \cline{7-11} 2 & D & M & 2  & 08:02.570996 & & 2 & C & M & 2  & 06:59.967490\\%"
+\cline{1-5} \cline{7-11} 1 & F & M & 1  & 08:38.698360 & & 2 & R & C & 2  & 07:18.927029\\%"
+\cline{1-5} \cline{7-11} 2 & F & C & 2  & 08:42.389884 & & 2 & C & M & 6  & 07:45.403075\\%"
+\cline{1-5} \cline{7-11} 1 & F & M & 16 & 10:18.809487 & & 2 & R & C & 10 & 08:56.765163\\%"
+\cline{1-5} \cline{7-11} 1 & D & C & 13 & 10:25.359836 & & 1 & C & C & 16 & 09:20.284593\\%"
+\cline{1-5} \cline{7-11} 2 & F & C & 9  & 10:51.761493 & & 1 & R & M & 7  & 09:23.574403\\%"
+\cline{1-5} \cline{7-11} 1 & F & M & 7  & 10:52.183247 & & 1 & R & M & 4  & 09:25.089084\\%"
+\cline{1-5} \cline{7-11} 2 & F & C & 10 & 10:52.495216 & & 2 & R & C & 14 & 09:27.112225\\%"
+\cline{1-5} \cline{7-11} 1 & D & C & 8  & 11:39.151434 & & 2 & R & C & 3  & 09:55.736324\\%"
+\cline{1-5} \cline{7-11} 1 & D & C & 15 & 12:03.519008 & & 1 & C & C & 15 & 10:25.475603\\%"
+\cline{1-5} \cline{7-11} 1 & F & M & 4  & 12:17.693128 & & 2 & R & C & 5  & 10:37.460834\\%"
+\cline{1-5} \cline{7-11} 2 & F & C & 3  & 12:26.993837 & & 2 & R & C & 9  & 10:49.014842\\%"
+\cline{1-5} \cline{7-11} 2 & F & C & 14 & 12:49.585392 & & 1 & R & M & 16 & 10:56.743477\\%"
+\cline{1-5} \cline{7-11} 2 & F & C & 11 & 13:04.272941 & & 1 & C & C & 13 & 11:04.485390\\%"
+\cline{1-5} \cline{7-11} 1 & D & C & 4  & 13:16.470523 & & 1 & C & C & 4  & 12:06.690347\\%"
+\cline{1-5} \cline{7-11} 1 & D & C & 1  & 15:47.376327 & & 1 & C & C & 8  & 13:38.014602\\%"
+\cline{1-5} \cline{7-11} 1 & D & C & 16 & 18:02.259692 & & 1 & C & C & 12 & 14:37.197260\\%"
+\cline{1-5} \cline{7-11} 1 & F & M & 12 & 20:03.920754 & & 1 & R & M & 1  & 17:09.073104\\%"
+\cline{1-5} \cline{7-11} 2 & F & C & 5  & 21:32.272442 & & 2 & R & C & 11 & 17:11.980052\\%"
+\cline{1-5} \cline{7-11} 2 & F & C & 6  & 23:10.727760 & & 1 & C & C & 7  & 19:35.816561\\%"
+\cline{1-5} \cline{7-11} 1 & D & C & 7  & 23:20.991158 & & 2 & R & C & 6  & 28:02.391335\\%"
+\cline{1-5} \cline{7-11} 1 & D & C & 12 & 41:29.414342 & & 1 & C & C & 1  & 28:18.301114\\%"
+\cline{1-5} \cline{7-11} 
+\end{tabularx}}
+\end{table}
+
+\begin{table}[h]
+\caption{Maintenance Process Timings\label{tab:resulttimemaint}}
+%~~\\
+\resizebox{0.425\textwidth}{!}
+{\centering
+\begin{tabularx}{
+0.50\textwidth}{|c|c|c|c|c|X|c|c|c|c|c|}
+\cline{1-5}  \cline{7-11}
+\multicolumn{5}{|c|}{ \cellcolor[gray]{\shadow} Real Study} & &  \multicolumn{5}{|c|}{\cellcolor[gray]{\shadow} Spare Study}  
+\\
+\cline{1-5}  \cline{7-11}   \cellcolor[gray]{\lightgray} G & \cellcolor[gray]{\lightgray}  A & \cellcolor[gray]{\lightgray}  T & \cellcolor[gray]{\lightgray}  P & \cellcolor[gray]{\lightgray}   Time 
+& &
+\cellcolor[gray]{\lightgray}  G & \cellcolor[gray]{\lightgray}  A & \cellcolor[gray]{\lightgray}  T & \cellcolor[gray]{\lightgray}  P & \cellcolor[gray]{\lightgray}   Time 
+\\ %
+\cline{1-5} \cline{7-11} 2 & F & C & 10 & 02:30.944685 & & 2 & C & M & 5  & 01:43.801965\\%"
+\cline{1-5} \cline{7-11} 2 & F & C & 9  & 02:54.232578 & & 2 & C & M & 3  & 02:17.158954\\%"
+\cline{1-5} \cline{7-11} 1 & D & C & 8  & 03:02.751342 & & 1 & C & C & 8  & 02:34.248260\\%"
+\cline{1-5} \cline{7-11} 2 & F & C & 2  & 03:11.695431 & & 1 & C & C & 14 & 02:57.405545\\%"
+\cline{1-5} \cline{7-11} 1 & D & C & 15 & 03:31.801582 & & 2 & R & C & 2  & 03:01.547524\\%"
+\cline{1-5} \cline{7-11} 2 & F & C & 12 & 03:45.692316 & & 2 & R & C & 10 & 03:09.169865\\%"
+\cline{1-5} \cline{7-11} 2 & F & C & 3  & 05:09.817914 & & 2 & C & M & 2  & 03:25.640129\\%"
+\cline{1-5} \cline{7-11} 2 & F & C & 5  & 05:44.462030 & & 2 & R & C & 3  & 03:39.443080\\%"
+\cline{1-5} \cline{7-11} 1 & F & M & 8  & 05:53.407296 & & 1 & C & C & 7  & 04:28.998071\\%"
+\cline{1-5} \cline{7-11} 2 & F & C & 11 & 07:08.687074 & & 2 & R & C & 6  & 04:35.517498\\%"
+\cline{1-5} \cline{7-11} 2 & F & C & 6  & 07:38.576312 & & 2 & R & C & 12 & 04:41.052812\\%"
+\cline{1-5} \cline{7-11} 1 & F & M & 4  & 07:53.595699 & & 2 & R & C & 11 & 04:46.028085\\%"
+\cline{1-5} \cline{7-11} 1 & F & M & 14 & 08:14.148937 & & 1 & R & M & 8  & 04:51.290971\\%"
+\cline{1-5} \cline{7-11} 2 & D & M & 3  & 08:27.092566 & & 2 & C & M & 6  & 04:53.800449\\%"
+\cline{1-5} \cline{7-11} 1 & D & C & 1  & 08:37.138931 & & 1 & R & M & 15 & 04:58.094389\\%"
+\cline{1-5} \cline{7-11} 1 & F & M & 13 & 08:50.185469 & & 1 & C & C & 15 & 05:21.846560\\%"
+\cline{1-5} \cline{7-11} 1 & F & M & 1  & 09:15.253791 & & 2 & R & C & 5  & 05:42.389865\\%"
+\cline{1-5} \cline{7-11} 2 & D & M & 5  & 09:15.934211 & & 2 & C & M & 10 & 07:18.533351\\%"
+\cline{1-5} \cline{7-11} 1 & D & C & 14 & 09:32.031612 & & 1 & R & M & 14 & 07:24.342788\\%"
+\cline{1-5} \cline{7-11} 1 & D & C & 7  & 10:04.694800 & & 1 & C & C & 16 & 07:37.332151\\%"
+\cline{1-5} \cline{7-11} 1 & F & M & 15 & 11:07.617639 & & 1 & R & M & 1  & 07:44.516376\\%"
+\cline{1-5} \cline{7-11} 2 & D & M & 6  & 11:32.482992 & & 2 & C & M & 11 & 08:08.144168\\%"
+\cline{1-5} \cline{7-11} 2 & D & M & 2  & 11:49.247460 & & 2 & R & C & 9  & 08:13.115942\\%"
+\cline{1-5} \cline{7-11} 1 & D & C & 16 & 12:12.576158 & & 1 & R & M & 13 & 08:32.056119\\%"
+\cline{1-5} \cline{7-11} 1 & F & M & 7  & 12:27.297563 & & 1 & R & M & 16 & 11:28.592180\\%"
+\cline{1-5} \cline{7-11} 1 & D & C & 13 & 12:49.443610 & & 1 & R & M & 7  & 11:45.459699\\%"
+\cline{1-5} \cline{7-11} 2 & D & M & 11 & 13:00.604583 & & 2 & C & M & 9  & 12:42.958789\\%"
+\cline{1-5} \cline{7-11} 1 & D & C & 4  & 13:25.433748 & & 1 & R & M & 4  & 13:57.879299\\%"
+\cline{1-5} \cline{7-11} 2 & D & M & 9  & 15:51.117061 & & 1 & C & C & 1  & 14:46.465482\\%"
+\cline{1-5} \cline{7-11} 2 & D & M & 12 & 15:56.048486 & & 1 & C & C & 4  & 17:55.176353\\%"
+\cline{1-5} \cline{7-11} 2 & D & M & 10 & 21:23.533192 & & 1 & C & C & 13 & 18:02.486509\\%"
+\cline{1-5} \cline{7-11} 1 & F & M & 16 & 32:32.875079 & & 2 & C & M & 12 & 25:54.176697\\%"
+\cline{1-5} \cline{7-11} 
+\end{tabularx}}
+\end{table}
+

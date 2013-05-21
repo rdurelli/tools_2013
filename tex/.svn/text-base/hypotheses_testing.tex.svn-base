@@ -1,0 +1,195 @@
+In this section, we present statistical calculations to evaluate the data of both studies.
+We applied Paired T-Tests for each execution and another T-Test after removing eight outliers for each study.
+The seconds spent were processed using the statistic computation environment ``R''%\footnote{http://www.r-project.org/}.  
+~\cite{gnur}.
+ Considering the reuse study, the results of the T-Tests are shown on Table~\ref{tab:ttest_reuse}. 
+For the maintenance study, the same operation was executed and the results of the T-Test are shown on Table~\ref{tab:ttest_maintenance}.
+
+The first columns of these tables contain the type of T-Test, the second columns indicate the source of the data,
+the ``Means'' columns indicate the resultant mean, which is the mean of the differences 
+for an paired T-Test and one mean for each set for the other T-Test, which represent the conventional and the model-based tool means, respectively. The ``d.t.'' columns stand for the degree of freedom; ``t'' and ``p'' are variables considered in the hypothesis testing. 
+
+The Paired T-Test is used to compare the the differences between two samples related to each participant, in this case, the time difference of every participant is considered individually, and then, the means of the differences are calculated. 
+In the ``Two-Sided'' T-Tests, which are unpaired, the means are calculated for the entire group, because a participant may be an outlier in a specific technique, which breaks the pairs. It is referred as two-sided because the two sets have the same number of elements, since the same number of outliers were removed from each group.
+
+
+\begin{table}[h]
+\centering
+\caption{Reuse Study T-Test Results\label{tab:ttest_reuse}}
+~~\\
+\resizebox{\figwidth}{!}
+{
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+\cellcolor[gray]{\shadow} T-Test & \cellcolor[gray]{\shadow} Data & \cellcolor[gray]{\shadow} Means & \cellcolor[gray]{\shadow} d.f. & \cellcolor[gray]{\shadow} t & \cellcolor[gray]{\shadow} p 
+\\
+\hline
+Paired & Real & 488.4596 & 15 & 5.841634 & 3.243855$\cdot$10$^{-05}$
+\\
+\hline
+Paired & Spare & 417.8927 & 15 & 5.285366 &  9.156136$\cdot$10$^{-05}$
+\\
+\hline
+\multirow{2}{*}{Two-Sided} & \multirow{2}{*}{Both} & 771.4236 &
+\multirow{2}{*}{43.70626} & \multirow{2}{*}{6.977408} & \multirow{2}{*}{1.276575$\cdot$10$^{-08}$}
+\\
+\cline{3-3}
+                          &                      & 409.4295  & & &                          
+\\
+\hline
+\end{tabular}
+}
+\end{table}
+
+\begin{table}[h]
+\centering
+\caption{Maintenance Study T-Test Results\label{tab:ttest_maintenance}}
+~~\\
+\resizebox{\figwidth}{!}
+{
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+\cellcolor[gray]{\shadow} T-Test & \cellcolor[gray]{\shadow} Data & \cellcolor[gray]{\shadow} Means & \cellcolor[gray]{\shadow} d.f. & \cellcolor[gray]{\shadow} t & \cellcolor[gray]{\shadow} p 
+\\
+\hline
+Paired & Real &   -345.6539 & 15 & -3.971923 & 0.001227479%$\cdot$10$^{-05}$
+\\
+\hline
+Paired & Spare & -95.88892 & 15 & -1.191781   & 0.2518624% $\cdot$10$^{-05}$
+\\
+\hline
+\multirow{2}{*}{Two-Sided} & \multirow{2}{*}{Both} & 431.3323 &
+\multirow{2}{*}{24.22097} & \multirow{2}{*}{  -2.662684} & \multirow{2}{*}{0.0135614%$\cdot$10$^{-08}$
+}
+\\
+\cline{3-3}
+                          &                      & 641.0024  & & &                          
+\\
+\hline
+\end{tabular}
+}
+\end{table}
+
+
+The ``Chi-squared test'' was applied on both studies in order to detect the outliers that were removed when calculating the unpaired T-Test, which is refered as ``Two-sided''. 
+The results of the ``Chi-squared test''  for the reuse study are found on Table~\ref{tab:chi} and the results of the same test for the maintenance study are found on Table~\ref{tab:chimaint}. The `M' in the techniques column indicates the use of our tool while `C' indicates the conventional technique, the group column indicates the number of the group; the X$^{2}$ indicates the result of an comparison to the variance of the complete set and the position column indicates their position on the set, i.e., highest or lowest.  The outlier column shows the timings in seconds that were considered abnormal.
+
+\begin{table}[h]
+\centering
+\caption{Chi-squared test for outlier detection applied on Reuse Study\label{tab:chi}}
+~~\\
+\resizebox{\figwidth}{!}
+{
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+
+\cellcolor[gray]{\shadow} Study & \cellcolor[gray]{\shadow} T. & \cellcolor[gray]{\shadow} G. &  \cellcolor[gray]{\shadow} X$^{2}$ & \cellcolor[gray]{\shadow} p & \cellcolor[gray]{\shadow} position & \cellcolor[gray]{\shadow} outlier \\
+\hline \multirow{4}{*}{Real} & \multirow{2}{*}{C}  & 1 & 5.104305 &  0.02386654 &  highest & 2489.414342 \\
+\cline{3-7} &  & 2 &  2.930583 & 0.08691612 & highest & 1390.72776 \\
+\cline{2-7} & \multirow{2}{*}{M} & 1 &  4.091151 & 0.04310829 & highest & 1203.920754 \\
+\cline{3-7} &   & 2 &  2.228028 & 0.1355267 & highest & 482.570996 \\
+\hline \multirow{4}{*}{Spare} & \multirow{2}{*}{C} & 1 & 4.552248 & 0.03287556 & highest & 1698.301114 \\
+\cline{3-7} &  & 2 & 5.013908 & 0.02514448 & highest & 1682.391335 \\
+\cline{2-7} & \multirow{2}{*}{M} & 1 & 3.917559 & 0.04778423 & highest & 1029.073104 \\
+\cline{3-7} &  & 2 & 2.943313 & 0.08623369 & lowest & 179.467569 \\
+\hline
+
+\end{tabular}
+}
+\end{table}
+
+
+\begin{table}[h]
+\centering
+\caption{Chi-squared test for outlier detection applied on Maintenance Study\label{tab:chimaint}}
+~~\\
+\resizebox{\figwidth}{!}
+{
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+
+\cellcolor[gray]{\shadow} Study & \cellcolor[gray]{\shadow} T. & \cellcolor[gray]{\shadow} G. &  \cellcolor[gray]{\shadow} X$^{2}$ & \cellcolor[gray]{\shadow} p & \cellcolor[gray]{\shadow} position & \cellcolor[gray]{\shadow} outlier \\
+\hline \multirow{4}{*}{Real} & \multirow{2}{*}{C}  & 1 &  2.350449 & 0.1252469  &  lowest & 182.751342  \\
+\cline{3-7} &  & 2 &  2.152789 &  0.1423112  & highest & 458.576312  \\
+\cline{2-7} & \multirow{2}{*}{M} & 1 &   5.788559 & 0.0161308 & highest & 1952.875079 \\
+\cline{3-7} &   & 2 &  3.598538 & 0.05783041 & highest & 1283.533192\\
+\hline \multirow{4}{*}{Spare} & \multirow{2}{*}{C} & 1 & 1.771974 & 0.183138 & highest & 1082.486509  \\
+\cline{3-7} &  & 2 & 4.338041 & 0.03726978 & highest & 493.115942  \\
+\cline{2-7} & \multirow{2}{*}{M} & 1 & 2.422232 & 0.1196244 & highest & 837.879299 \\
+\cline{3-7} &  & 2 & 4.87366 & 0.02726961 & lowest & 1554.176697 \\
+\hline
+
+\end{tabular}
+}
+\end{table}
+
+
+In order to achieve better visualization of the outliers, we also provide two plots of the data sets. % In Figure~\ref{fig:boxreal}, there is a box plot of the real study and in Figure~\ref{fig:boxspare}, there is a box plot of the spare study.
+%The boxes represent the value concentrations, the filled squares inside the boxes represent the mean of the set, the distances between the ``+'' symbols indicate the standard deviation of the set  and ``o'' symbols indicate outliers.
+In Figures~\ref{fig:reuselines} and \ref{fig:maintlines} there are line graphs which may be %also 
+used to visualize the dispersion of the timing records. In these plots, the timings for each technique are ordered independently, therefore, the participant numbers in these plots are not related to their identification codes.
+
+
+
+
+%\begin{figure}[!h]
+%\centering
+%\includegraphics[width=.40\textwidth,height=.225\textheight]{figuras/boxreal.\figext}
+%\caption{Real Reuse Process Box Plot \label{fig:boxreal}}
+%\end{figure}
+%
+%\begin{figure}[!h]
+%\centering
+%\includegraphics[width=.40\textwidth,height=.225\textheight]{figuras/boxspare.\figext}
+%\caption{Spare Reuse Process Box Plot \label{fig:boxspare}}
+%\end{figure}
+
+
+\begin{figure}[!h]
+\centering
+\setlength{\tabcolsep}{0pt}
+\begin{tabular}{c c}
+\sreal & \sspare \\
+\includegraphics[width=0.244\textwidth,height=.12005\textheight]{figuras/line_graph_reuse_real.\figext} &
+\includegraphics[width=0.244\textwidth,height=.12005\textheight]{figuras/line_graph_reuse_spare.\figext} \\
+\end{tabular}
+\caption{Reuse Process Timings Bars Graph\label{fig:reuselines}}
+\setlength{\tabcolsep}{6pt}
+\end{figure}
+
+\begin{figure}[!h]
+\centering
+\setlength{\tabcolsep}{0pt}
+\begin{tabular}{c c}
+\sreal & \sspare \\
+\includegraphics[width=0.244\textwidth,height=.12005\textheight]{figuras/line_graph_maintenance_real.\figext} &
+\includegraphics[width=0.244\textwidth,height=.12005\textheight]{figuras/line_graph_maintenance_spare.\figext} \\
+\end{tabular}
+\caption{Maintenance Process Timings Bars Graph\label{fig:maintlines}}
+\setlength{\tabcolsep}{6pt}
+\end{figure}
+
+
+Considering the reuse study and according to the analysis from Table~\ref{tab:ttest_reuse}, since all p-values are less than the margin of error (0.01\%), which corresponds to the established significance level of 99.99\%, then, statistically, we can reject the ``H0$_r$'' hypothesis that states the techniques are equivalent. 
+Since every t-value is positive, we can accept the ``Hp$_r$'' hypothesis, which considers that the conventional technique takes more time than our tool.
+ 
+Considering the maintenance study and according to the analysis from Table~\ref{tab:ttest_maintenance}, since all p-values are bigger than the margin of error (0.01\%), which corresponds to the established significance level of 99.99\%, then, statistically, we cannot reject the ``H0$_m$'' hypothesis that states the techniques are equivalent. 
+Therefore, statistically, we can assume that the effort needed to edit a reuse code and a reuse model is approximately equal.
+
+
+
+
+%Tue Mar 6 01:45:20 2012
+% 
+%Variable Name  Length  NAs  X-squared  p-value  Alternative Hypothesis  Variance
+%  RE.Conv.G1  16  8  2.350449  0.1252469  lowest value 182.751342 is an outlier  57220.05
+%  RE.Conv.G2  16  8  2.152789  0.1423112  highest value 458.576312 is an outlier  13912.52
+%  RE.Model.G1  16  8  5.788559  0.0161308  highest value 1952.875079 is an outlier  261818.4
+%  RE.Model.G2  16  8  3.598538  0.05783041  highest value 1283.533192 is an outlier  63766.33
+%  SE.Conv.G1  16  8  1.771974  0.183138  highest value 1082.486509 is an outlier  158219.8
+%  SE.Conv.G2  16  8  4.338041  0.03726978  highest value 493.115942 is an outlier  10125.53
+%  SE.Model.G1  16  8  2.422232  0.1196244  highest value 837.879299 is an outlier  39062.3
+%  SE.Model.G2  16  8  4.87366  0.02726961  highest value 1554.176697 is an outlier  228873.7
+
+
+
